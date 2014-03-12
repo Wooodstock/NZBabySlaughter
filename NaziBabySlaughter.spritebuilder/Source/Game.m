@@ -31,9 +31,21 @@
     int rangeX = maxX - minX;
     int randomX = (arc4random() % rangeX) + minX;
     CCLOG(@"contentSize : %f", self.contentSize.width);
+    
+    // tableau de pourcentage de colonne
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*20/100)]];
+    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*35/100)]];
+    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*50/100)]];
+    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*65/100)]];
+    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*80/100)]];
+    
+    int lowerBound = 0;
+    int upperBound = 5;
+    int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
 
     // 2
-    baby.position = CGPointMake(randomX, self.contentSize.height + baby.contentSize.height/2);
+    baby.position = CGPointMake([[array objectAtIndex:rndValue] floatValue], self.contentSize.height + baby.contentSize.height/2);
     [self addChild:baby];
     
     // 3 - setup of zombies speed
@@ -43,7 +55,7 @@
     int randomDuration = (arc4random() % rangeDuration) + minDuration;*/
     
     // 4
-    CCAction *actionMove = [CCActionMoveTo actionWithDuration:5.0 position:CGPointMake(randomX, -baby.contentSize.height/2)];
+    CCAction *actionMove = [CCActionMoveTo actionWithDuration:5.0 position:CGPointMake([[array objectAtIndex:rndValue] floatValue], -baby.contentSize.height/2)];
     CCAction *actionRemove = [CCActionRemove action];
     [baby runAction:[CCActionSequence actionWithArray:@[actionMove,actionRemove]]];
 }
