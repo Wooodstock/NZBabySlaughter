@@ -12,5 +12,4 @@
 
 @interface Game : CCNode
 
-
 @end
