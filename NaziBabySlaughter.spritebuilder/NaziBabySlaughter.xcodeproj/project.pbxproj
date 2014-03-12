@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		069A548C18D0C5EA008F36AE /* Crawling.m in Sources */ = {isa = PBXBuildFile; fileRef = 069A548B18D0C5EA008F36AE /* Crawling.m */; };
 		6415C5BD18D77218002B0435 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415C5BC18D77218002B0435 /* Player.m */; };
 		6415C5C018D77620002B0435 /* Baby.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415C5BF18D77620002B0435 /* Baby.m */; };
 		6415C5C318D779A0002B0435 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415C5C218D779A0002B0435 /* Game.m */; };
@@ -58,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		069A548A18D0C5EA008F36AE /* Crawling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Crawling.h; path = Source/Crawling.h; sourceTree = "<group>"; };
+		069A548B18D0C5EA008F36AE /* Crawling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Crawling.m; path = Source/Crawling.m; sourceTree = "<group>"; };
 		6415C5BB18D77218002B0435 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Source/Player.h; sourceTree = "<group>"; };
 		6415C5BC18D77218002B0435 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Source/Player.m; sourceTree = "<group>"; };
 		6415C5BE18D77620002B0435 /* Baby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Baby.h; path = Source/Baby.h; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 				6415C5BC18D77218002B0435 /* Player.m */,
 				6415C5BE18D77620002B0435 /* Baby.h */,
 				6415C5BF18D77620002B0435 /* Baby.m */,
+				069A548A18D0C5EA008F36AE /* Crawling.h */,
+				069A548B18D0C5EA008F36AE /* Crawling.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				6415C5C318D779A0002B0435 /* Game.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
+				069A548C18D0C5EA008F36AE /* Crawling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
