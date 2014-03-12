@@ -10,4 +10,7 @@
 
 @interface Game : CCNode
 
+
+
+
 @end
