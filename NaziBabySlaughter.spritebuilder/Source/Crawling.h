@@ -1,13 +1,13 @@
 //
-//  Baby.h
+//  Crawling.h
 //  NaziBabySlaughter
 //
-//  Created by Thibault Palier on 17/03/14.
+//  Created by Bertrand on 3/12/14.
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
 #import "CCSprite.h"
 
-@interface Baby : CCSprite
+@interface Crawling : CCSprite
 
 @end
