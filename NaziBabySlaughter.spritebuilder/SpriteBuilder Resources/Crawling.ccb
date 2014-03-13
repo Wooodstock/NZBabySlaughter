@@ -103,6 +103,8 @@
 				<string></string>
 				<key>displayName</key>
 				<string>left arm</string>
+				<key>locked</key>
+				<true/>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -193,8 +195,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>animatedProperties</key>
@@ -989,6 +989,44 @@
 		<string></string>
 		<key>memberVarAssignmentType</key>
 		<integer>0</integer>
+		<key>physicsBody</key>
+		<dict>
+			<key>affectedByGravity</key>
+			<false/>
+			<key>allowsRotation</key>
+			<false/>
+			<key>bodyShape</key>
+			<integer>0</integer>
+			<key>cornerRadius</key>
+			<real>0.0</real>
+			<key>density</key>
+			<real>1</real>
+			<key>dynamic</key>
+			<true/>
+			<key>elasticity</key>
+			<real>0.30000001192092896</real>
+			<key>friction</key>
+			<real>0.30000001192092896</real>
+			<key>points</key>
+			<array>
+				<array>
+					<real>-19.021484375</real>
+					<real>16.43359375</real>
+				</array>
+				<array>
+					<real>-16.03515625</real>
+					<real>-12.542976379394531</real>
+				</array>
+				<array>
+					<real>15.443359375</real>
+					<real>-13.054695129394531</real>
+				</array>
+				<array>
+					<real>16</real>
+					<real>16</real>
+				</array>
+			</array>
+		</dict>
 		<key>properties</key>
 		<array>
 			<dict>
@@ -1020,8 +1058,8 @@
 				<string>Point</string>
 				<key>value</key>
 				<array>
-					<real>0.5</real>
-					<real>0.5</real>
+					<real>0.0</real>
+					<real>0.0</real>
 				</array>
 			</dict>
 			<dict>
@@ -1045,7 +1083,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string></string>
+					<string>ccbResources/ccbParticleSnow.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -1062,6 +1100,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

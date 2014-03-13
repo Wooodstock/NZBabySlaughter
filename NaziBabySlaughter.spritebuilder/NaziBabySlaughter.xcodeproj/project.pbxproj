@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		069A548C18D0C5EA008F36AE /* Crawling.m in Sources */ = {isa = PBXBuildFile; fileRef = 069A548B18D0C5EA008F36AE /* Crawling.m */; };
+		06E486DA18D11F5200D911BE /* PoweredGun.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E486D918D11F5200D911BE /* PoweredGun.m */; };
+		06E486E218D156C100D911BE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E486E118D156C100D911BE /* CoreMotion.framework */; };
 		6415C5BD18D77218002B0435 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415C5BC18D77218002B0435 /* Player.m */; };
 		6415C5C318D779A0002B0435 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415C5C218D779A0002B0435 /* Game.m */; };
 		64B598D818D8B4FC00AE6472 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B598D718D8B4FC00AE6472 /* Ball.m */; };
@@ -59,8 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		069A548A18D0C5EA008F36AE /* Crawling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Crawling.h; path = Source/Crawling.h; sourceTree = "<group>"; };
 		069A548B18D0C5EA008F36AE /* Crawling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Crawling.m; path = Source/Crawling.m; sourceTree = "<group>"; };
+		06E486D818D11F5200D911BE /* PoweredGun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PoweredGun.h; path = Source/PoweredGun.h; sourceTree = "<group>"; };
+		06E486D918D11F5200D911BE /* PoweredGun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PoweredGun.m; path = Source/PoweredGun.m; sourceTree = "<group>"; };
+		06E486E118D156C100D911BE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		6415C5BB18D77218002B0435 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Source/Player.h; sourceTree = "<group>"; };
 		6415C5BC18D77218002B0435 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Source/Player.m; sourceTree = "<group>"; };
 		6415C5C118D779A0002B0435 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = Source/Game.h; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06E486E218D156C100D911BE /* CoreMotion.framework in Frameworks */,
 				B737898A1807642B0076A88C /* libcocos2d.a in Frameworks */,
 				B77F1B3217B978D7009739AE /* QuartzCore.framework in Frameworks */,
 				B77F1B3417B978D7009739AE /* OpenGLES.framework in Frameworks */,
@@ -128,10 +133,10 @@
 			children = (
 				6415C5BB18D77218002B0435 /* Player.h */,
 				6415C5BC18D77218002B0435 /* Player.m */,
-				6415C5BE18D77620002B0435 /* Baby.h */,
-				6415C5BF18D77620002B0435 /* Baby.m */,
 				64B598D618D8B4FC00AE6472 /* Ball.h */,
 				64B598D718D8B4FC00AE6472 /* Ball.m */,
+				06E486D818D11F5200D911BE /* PoweredGun.h */,
+				06E486D918D11F5200D911BE /* PoweredGun.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06E486E118D156C100D911BE /* CoreMotion.framework */,
 				B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */,
 				B77F1B3117B978D7009739AE /* QuartzCore.framework */,
 				B77F1B3317B978D7009739AE /* OpenGLES.framework */,
@@ -369,6 +375,7 @@
 				64B598D818D8B4FC00AE6472 /* Ball.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				069A548C18D0C5EA008F36AE /* Crawling.m in Sources */,
+				06E486DA18D11F5200D911BE /* PoweredGun.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,17 +9,30 @@
 #import "Game.h"
 #import "Ball.h"
 #import "Crawling.h"
+#import "poweredGun.h"
+#import <CoreMotion/CoreMotion.h>
 
 @implementation Game{
     CCNode *_player;
     CCNode *_contentNode;
     CCNode *_playerZone;
+    CCPhysicsNode *_physicsWorld;
+    CMMotionManager *_motionManager;
 }
 
 
 // is called when CCB file has completed loading
 - (void)didLoadFromCCB {
     
+    // Init the coremotionManager
+    _motionManager = [[CMMotionManager alloc] init];
+    
+    _physicsWorld = [CCPhysicsNode node];
+    _physicsWorld.gravity = ccp(0,0);
+    _physicsWorld.debugDraw = YES;
+    _physicsWorld.collisionDelegate = self;
+    
+    [self addChild:_physicsWorld];
     self.userInteractionEnabled = TRUE;
     [_player setVisible:true];
     [self schedule:@selector(addBaby:) interval:1.5];
@@ -49,9 +62,10 @@
     if(touchLocation.y > _playerZone.contentSize.height && touchLocation.x < _playerZone.contentSize.width && touchLocation.x > _playerZone.anchorPointInPoints.x)
     {
         // 4
-        Ball *ball = (Ball*)[CCBReader load:@"Ball"];
+        PoweredGun *ball = (PoweredGun*)[CCBReader load:@"poweredGun"];
         ball.position = CGPointMake(_player.position.x + _player.contentSize.width, _player.position.y + _player.contentSize.height);
-        [self addChild:ball ];
+        ball.physicsBody.collisionType  = @"ballCollision";
+        [_physicsWorld addChild:ball ];
         
         CGPoint targetPosition = CGPointMake(_player.position.x + _player.contentSize.width, self.contentSize.height + ball.contentSize.height/2);
         
@@ -61,6 +75,31 @@
     }
     
     
+}
+
+- (void)onEnter {
+    [super onEnter];
+    [_motionManager startAccelerometerUpdates];
+}
+
+- (void)onExit {
+    [super onExit];
+    [_motionManager stopAccelerometerUpdates];
+}
+
+- (void)update:(CCTime)delta {
+    CMAccelerometerData *accelerometerData = _motionManager.accelerometerData;
+    CMAcceleration acceleration = accelerometerData.acceleration;
+    CGFloat newXPosition = _player.position.x + acceleration.x * 1000 * delta;
+    newXPosition = clampf(newXPosition, 0, _playerZone.contentSize.width);
+    _player.position = CGPointMake(newXPosition, _player.position.y);
+}
+
+
+- (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair babyCollision:(CCNode *)baby ballCollision:(CCNode *)ball {
+    [baby removeFromParent];
+    [ball removeFromParent];
+    return YES;
 }
 
 - (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
@@ -88,13 +127,6 @@
     
     Crawling *baby = (Crawling*)[CCBReader load:@"Crawling"];
     
-    // 1
-    int minX = baby.contentSize.width / 2;
-    int maxX = self.contentSize.width - baby.contentSize.width / 2;
-    int rangeX = maxX - minX;
-    int randomX = (arc4random() % rangeX) + minX;
-    CCLOG(@"contentSize : %f", self.contentSize.width);
-    
     // tableau de pourcentage de colonne
     NSMutableArray *array = [[NSMutableArray alloc] init];
     [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*20/100)]];
@@ -109,7 +141,11 @@
 
     // 2
     baby.position = CGPointMake([[array objectAtIndex:rndValue] floatValue], self.contentSize.height + baby.contentSize.height/2);
-    [self addChild:baby];
+    //baby.physicsBody = [CCPhysicsBody bodyWithRect:(CGRect){CGPointZero, baby.contentSize} cornerRadius:0];
+    baby.physicsBody.collisionType  = @"babyCollision";
+    
+    
+    [_physicsWorld addChild:baby];
     
     // 3 - setup of zombies speed
     /*int minDuration = 2.0;
