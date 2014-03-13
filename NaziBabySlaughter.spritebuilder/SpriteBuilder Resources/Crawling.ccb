@@ -951,9 +951,9 @@
 			<key>allowsRotation</key>
 			<false/>
 			<key>bodyShape</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>cornerRadius</key>
-			<real>0.0</real>
+			<real>16</real>
 			<key>density</key>
 			<real>1</real>
 			<key>dynamic</key>
@@ -965,20 +965,8 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>-19.021484375</real>
-					<real>16.43359375</real>
-				</array>
-				<array>
-					<real>-16.03515625</real>
-					<real>-12.542976379394531</real>
-				</array>
-				<array>
-					<real>15.443359375</real>
-					<real>-13.054695129394531</real>
-				</array>
-				<array>
-					<real>16</real>
-					<real>16</real>
+					<real>-0.046875</real>
+					<real>1.37890625</real>
 				</array>
 			</array>
 		</dict>
@@ -1055,6 +1043,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

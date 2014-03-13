@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		068D189918D1FCC400EF4C44 /* SergentBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D189818D1FCC400EF4C44 /* SergentBaby.m */; };
 		06E486DA18D11F5200D911BE /* PoweredGun.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E486D918D11F5200D911BE /* PoweredGun.m */; };
 		06E486E218D156C100D911BE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E486E118D156C100D911BE /* CoreMotion.framework */; };
 		06E486E818D16D0000D911BE /* Wall.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E486E718D16D0000D911BE /* Wall.m */; };
@@ -65,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		068D189718D1FCC400EF4C44 /* SergentBaby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SergentBaby.h; path = Source/SergentBaby.h; sourceTree = "<group>"; };
+		068D189818D1FCC400EF4C44 /* SergentBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SergentBaby.m; path = Source/SergentBaby.m; sourceTree = "<group>"; };
 		06E486D818D11F5200D911BE /* PoweredGun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PoweredGun.h; path = Source/PoweredGun.h; sourceTree = "<group>"; };
 		06E486D918D11F5200D911BE /* PoweredGun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PoweredGun.m; path = Source/PoweredGun.m; sourceTree = "<group>"; };
 		06E486E118D156C100D911BE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -160,6 +163,8 @@
 				6427D06118DA553F00B17793 /* GeneralBaby.m */,
 				6427D06318DA556000B17793 /* CaporalBaby.h */,
 				6427D06418DA556000B17793 /* CaporalBaby.m */,
+				068D189718D1FCC400EF4C44 /* SergentBaby.h */,
+				068D189818D1FCC400EF4C44 /* SergentBaby.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 				6427D06518DA556000B17793 /* CaporalBaby.m in Sources */,
 				06E486E818D16D0000D911BE /* Wall.m in Sources */,
 				6415C5C318D779A0002B0435 /* Game.m in Sources */,
+				068D189918D1FCC400EF4C44 /* SergentBaby.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				64B598D818D8B4FC00AE6472 /* Bullet.m in Sources */,
 				6427D05E18DA551200B17793 /* Crawling.m in Sources */,

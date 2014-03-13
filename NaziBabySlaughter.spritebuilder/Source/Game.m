@@ -9,7 +9,7 @@
 #import "Game.h"
 #import "Bullet.h"
 #import "Crawling.h"
-#import "CaporalBaby.h"
+#import "SergentBaby.h"
 #import "GeneralBaby.h"
 #import "poweredGun.h"
 #import "Wall.h"
@@ -36,7 +36,7 @@
     
     _physicsWorld = [CCPhysicsNode node];
     _physicsWorld.gravity = ccp(0,0);
-    _physicsWorld.debugDraw = YES;
+    //_physicsWorld.debugDraw = YES;
     _physicsWorld.collisionDelegate = self;
     
     [self addChild:_physicsWorld];
@@ -190,24 +190,24 @@
     
     if([baby isKindOfClass:[Crawling class]]){
         
-        if([ball isKindOfClass:[PoweredGun class]]){
+        if([ball isKindOfClass:[Bullet class]]){
             [baby removeFromParent];
-            [ball removeFromParent];
         }
+        [ball removeFromParent];
         NSLog(@"crawling going");
     }
     if([baby isKindOfClass:[GeneralBaby class]]){
-        if([ball isKindOfClass:[MegaGun class]]){
+        if([ball isKindOfClass:[PoweredGun class]]){
             [baby removeFromParent];
-            [ball removeFromParent];
         }
+        [ball removeFromParent];
         NSLog(@"general going");
     }
-    if([baby isKindOfClass:[CaporalBaby class]]){
-        if([ball isKindOfClass:[Bullet class]]){
+    if([baby isKindOfClass:[SergentBaby class]]){
+        if([ball isKindOfClass:[MegaGun class]]){
             [baby removeFromParent];
-            [ball removeFromParent];
         }
+        [ball removeFromParent];
         NSLog(@"caporal going");
     }
     
@@ -257,7 +257,7 @@
     int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
     
     Crawling *crawling;
-    CaporalBaby *caporal;
+    SergentBaby *sergent;
     GeneralBaby *general;
 
     switch (rndValueBaby) {
@@ -286,12 +286,12 @@
             break;
         case 2:
         {
-            caporal = (CaporalBaby*)[CCBReader load:@"CaporalBaby"];
+            sergent = (SergentBaby*)[CCBReader load:@"SergentBaby"];
             // 2
-            caporal.position = CGPointMake([[array objectAtIndex:rndValue] floatValue], self.contentSize.height + caporal.contentSize.height/2);
+            sergent.position = CGPointMake([[array objectAtIndex:rndValue] floatValue], self.contentSize.height + sergent.contentSize.height/2);
             //baby.physicsBody = [CCPhysicsBody bodyWithRect:(CGRect){CGPointZero, baby.contentSize} cornerRadius:0];
-            caporal.physicsBody.collisionType  = @"babyCollision";
-            [_physicsWorld addChild:caporal];
+            sergent.physicsBody.collisionType  = @"babyCollision";
+            [_physicsWorld addChild:sergent];
             
             // 3 - setup of zombies speed
             /*int minDuration = 2.0;
@@ -300,9 +300,9 @@
              int randomDuration = (arc4random() % rangeDuration) + minDuration;*/
             
             // 4
-            CCAction *actionMoveCaporal = [CCActionMoveTo actionWithDuration:10.0 position:CGPointMake([[array objectAtIndex:rndValue] floatValue], -caporal.contentSize.height/2)];
-            CCAction *actionRemoveCaporal = [CCActionRemove action];
-            [caporal runAction:[CCActionSequence actionWithArray:@[actionMoveCaporal,actionRemoveCaporal]]];
+            CCAction *actionMoveSergent = [CCActionMoveTo actionWithDuration:10.0 position:CGPointMake([[array objectAtIndex:rndValue] floatValue], -sergent.contentSize.height/2)];
+            CCAction *actionRemoveSergent = [CCActionRemove action];
+            [sergent runAction:[CCActionSequence actionWithArray:@[actionMoveSergent,actionRemoveSergent]]];
         }
             break;
         case 0:
