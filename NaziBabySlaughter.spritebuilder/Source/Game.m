@@ -10,6 +10,7 @@
 #import "Ball.h"
 #import "Crawling.h"
 #import "poweredGun.h"
+#import "Wall.h"
 #import <CoreMotion/CoreMotion.h>
 
 @implementation Game{
@@ -33,6 +34,25 @@
     _physicsWorld.collisionDelegate = self;
     
     [self addChild:_physicsWorld];
+    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*20/100)]];
+    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*35/100)]];
+    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*50/100)]];
+    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*65/100)]];
+    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*80/100)]];
+
+    for (int i = 0; i < 5; i++) {
+        Wall *wall = (Wall*)[CCBReader load:@"Wall"];
+        wall.position = CGPointMake([[array objectAtIndex:i] floatValue], _playerZone.contentSize.height + wall.contentSize.height/2);
+        wall.physicsBody.collisionType  = @"wallCollision";
+        wall.physicsBody.collisionGroup = @"player";
+        
+        [_physicsWorld addChild:wall];
+    }
+    
+    
+    
     self.userInteractionEnabled = TRUE;
     [_player setVisible:true];
     [self schedule:@selector(addBaby:) interval:1.5];
@@ -65,6 +85,7 @@
         PoweredGun *ball = (PoweredGun*)[CCBReader load:@"poweredGun"];
         ball.position = CGPointMake(_player.position.x + _player.contentSize.width, _player.position.y + _player.contentSize.height);
         ball.physicsBody.collisionType  = @"ballCollision";
+        ball.physicsBody.collisionGroup = @"player";
         [_physicsWorld addChild:ball ];
         
         CGPoint targetPosition = CGPointMake(_player.position.x + _player.contentSize.width, self.contentSize.height + ball.contentSize.height/2);
@@ -99,6 +120,13 @@
 - (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair babyCollision:(CCNode *)baby ballCollision:(CCNode *)ball {
     [baby removeFromParent];
     [ball removeFromParent];
+    return YES;
+}
+
+- (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair babyCollision:(CCNode *)baby wallCollision:(CCNode *)wall {
+    Wall *currentWall = (Wall*) wall;
+    [currentWall destroy];
+    [baby removeFromParent];
     return YES;
 }
 

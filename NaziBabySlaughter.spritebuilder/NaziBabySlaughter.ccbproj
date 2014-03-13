@@ -90,6 +90,11 @@
 		</dict>
 		<key>Sprites</key>
 		<dict/>
+		<key>Walls</key>
+		<dict>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
 		<key>background.png</key>
 		<dict/>
 		<key>ccbResources</key>
@@ -176,8 +181,6 @@
 		</dict>
 		<key>crawling</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>isSmartSpriteSheet</key>
 			<true/>
 		</dict>
