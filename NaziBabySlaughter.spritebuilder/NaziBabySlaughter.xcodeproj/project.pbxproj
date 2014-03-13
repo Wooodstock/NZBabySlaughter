@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		069A548C18D0C5EA008F36AE /* Crawling.m in Sources */ = {isa = PBXBuildFile; fileRef = 069A548B18D0C5EA008F36AE /* Crawling.m */; };
 		06E486DA18D11F5200D911BE /* PoweredGun.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E486D918D11F5200D911BE /* PoweredGun.m */; };
 		06E486E218D156C100D911BE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E486E118D156C100D911BE /* CoreMotion.framework */; };
 		06E486E818D16D0000D911BE /* Wall.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E486E718D16D0000D911BE /* Wall.m */; };
@@ -66,7 +65,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		069A548B18D0C5EA008F36AE /* Crawling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Crawling.m; path = Source/Crawling.m; sourceTree = "<group>"; };
 		06E486D818D11F5200D911BE /* PoweredGun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PoweredGun.h; path = Source/PoweredGun.h; sourceTree = "<group>"; };
 		06E486D918D11F5200D911BE /* PoweredGun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PoweredGun.m; path = Source/PoweredGun.m; sourceTree = "<group>"; };
 		06E486E118D156C100D911BE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -403,7 +401,6 @@
 				64B598D818D8B4FC00AE6472 /* Bullet.m in Sources */,
 				6427D05E18DA551200B17793 /* Crawling.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
-				069A548C18D0C5EA008F36AE /* Crawling.m in Sources */,
 				64D4331818DA0E190065D49D /* MegaGun.m in Sources */,
 				06E486DA18D11F5200D911BE /* PoweredGun.m in Sources */,
 			);
