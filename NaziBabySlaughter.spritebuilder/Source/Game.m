@@ -208,23 +208,7 @@
     
     int lowerBoundBaby = 0;
     int upperBoundBaby = 3;
-    int rndValueBaby = lowerBound + arc4random() % (upperBoundBaby - lowerBoundBaby);
-    
-    
-    switch (rndValueBaby) {
-        case 1:
-            Crawling *baby = (Crawling*)[CCBReader load:@"Crawling"];
-            break;
-        case 2:
-            Crawling *baby = (Crawling*)[CCBReader load:@"Crawling"];
-            break;
-        case 3:
-            Crawling *baby = (Crawling*)[CCBReader load:@"Crawling"];
-            break;
-        default:
-            break;
-    }
-    
+    int rndValueBaby = lowerBoundBaby + arc4random() % (upperBoundBaby - lowerBoundBaby);
     
     // tableau de pourcentage de colonne
     NSMutableArray *array = [[NSMutableArray alloc] init];
@@ -237,25 +221,84 @@
     int lowerBound = 0;
     int upperBound = 5;
     int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
+    
+    Crawling *crawling;
+    CaporalBaby *caporal;
+    GeneralBaby *general;
+    switch (rndValueBaby) {
+        case 1:
+        {
 
-    // 2
-    baby.position = CGPointMake([[array objectAtIndex:rndValue] floatValue], self.contentSize.height + baby.contentSize.height/2);
-    //baby.physicsBody = [CCPhysicsBody bodyWithRect:(CGRect){CGPointZero, baby.contentSize} cornerRadius:0];
-    baby.physicsBody.collisionType  = @"babyCollision";
+            crawling = (Crawling*)[CCBReader load:@"Crawling"];
+
+            // 2
+            crawling.position = CGPointMake([[array objectAtIndex:rndValue] floatValue], self.contentSize.height + crawling.contentSize.height/2);
+            //baby.physicsBody = [CCPhysicsBody bodyWithRect:(CGRect){CGPointZero, baby.contentSize} cornerRadius:0];
+            crawling.physicsBody.collisionType  = @"babyCollision";
+            [_physicsWorld addChild:crawling];
+            
+            // 3 - setup of zombies speed
+            /*int minDuration = 2.0;
+             int maxDuration = 4.0;
+             int rangeDuration = maxDuration - minDuration;
+             int randomDuration = (arc4random() % rangeDuration) + minDuration;*/
+            
+            // 4
+            CCAction *actionMove = [CCActionMoveTo actionWithDuration:10.0 position:CGPointMake([[array objectAtIndex:rndValue] floatValue], -crawling.contentSize.height/2)];
+            CCAction *actionRemove = [CCActionRemove action];
+            [crawling runAction:[CCActionSequence actionWithArray:@[actionMove,actionRemove]]];
+        }
+            break;
+        case 2:
+        {
+            caporal = (CaporalBaby*)[CCBReader load:@"CaporalBaby"];
+            // 2
+            caporal.position = CGPointMake([[array objectAtIndex:rndValue] floatValue], self.contentSize.height + caporal.contentSize.height/2);
+            //baby.physicsBody = [CCPhysicsBody bodyWithRect:(CGRect){CGPointZero, baby.contentSize} cornerRadius:0];
+            caporal.physicsBody.collisionType  = @"babyCollision";
+            [_physicsWorld addChild:caporal];
+            
+            // 3 - setup of zombies speed
+            /*int minDuration = 2.0;
+             int maxDuration = 4.0;
+             int rangeDuration = maxDuration - minDuration;
+             int randomDuration = (arc4random() % rangeDuration) + minDuration;*/
+            
+            // 4
+            CCAction *actionMoveCaporal = [CCActionMoveTo actionWithDuration:10.0 position:CGPointMake([[array objectAtIndex:rndValue] floatValue], -caporal.contentSize.height/2)];
+            CCAction *actionRemoveCaporal = [CCActionRemove action];
+            [caporal runAction:[CCActionSequence actionWithArray:@[actionMoveCaporal,actionRemoveCaporal]]];
+        }
+            break;
+        case 3:
+        {
+            general = (GeneralBaby*)[CCBReader load:@"GeneralBaby"];
+            // 2
+            general.position = CGPointMake([[array objectAtIndex:rndValue] floatValue], self.contentSize.height + general.contentSize.height/2);
+            //baby.physicsBody = [CCPhysicsBody bodyWithRect:(CGRect){CGPointZero, baby.contentSize} cornerRadius:0];
+            general.physicsBody.collisionType  = @"babyCollision";
+            [_physicsWorld addChild:general];
+            
+            // 3 - setup of zombies speed
+            /*int minDuration = 2.0;
+             int maxDuration = 4.0;
+             int rangeDuration = maxDuration - minDuration;
+             int randomDuration = (arc4random() % rangeDuration) + minDuration;*/
+            
+            // 4
+            CCAction *actionMoveGeneral = [CCActionMoveTo actionWithDuration:10.0 position:CGPointMake([[array objectAtIndex:rndValue] floatValue], -general.contentSize.height/2)];
+            CCAction *actionRemoveGeneral = [CCActionRemove action];
+            [general runAction:[CCActionSequence actionWithArray:@[actionMoveGeneral,actionRemoveGeneral]]];
+        }
+            break;
+        default:{}
+            break;
+    }
     
     
-    [_physicsWorld addChild:baby];
-    
-    // 3 - setup of zombies speed
-    /*int minDuration = 2.0;
-    int maxDuration = 4.0;
-    int rangeDuration = maxDuration - minDuration;
-    int randomDuration = (arc4random() % rangeDuration) + minDuration;*/
-    
-    // 4
-    CCAction *actionMove = [CCActionMoveTo actionWithDuration:10.0 position:CGPointMake([[array objectAtIndex:rndValue] floatValue], -baby.contentSize.height/2)];
-    CCAction *actionRemove = [CCActionRemove action];
-    [baby runAction:[CCActionSequence actionWithArray:@[actionMove,actionRemove]]];
+
+
+
 }
 
 @end
