@@ -9,6 +9,8 @@
 #import "Game.h"
 #import "Bullet.h"
 #import "Crawling.h"
+#import "CaporalBaby.h"
+#import "GeneralBaby.h"
 #import "poweredGun.h"
 #import "Wall.h"
 #import "PoweredGun.h"
@@ -202,7 +204,27 @@
 
 - (void)addBaby:(CCTime)dt {
     
-    Crawling *baby = (Crawling*)[CCBReader load:@"Crawling"];
+    
+    
+    int lowerBoundBaby = 0;
+    int upperBoundBaby = 3;
+    int rndValueBaby = lowerBound + arc4random() % (upperBoundBaby - lowerBoundBaby);
+    
+    
+    switch (rndValueBaby) {
+        case 1:
+            Crawling *baby = (Crawling*)[CCBReader load:@"Crawling"];
+            break;
+        case 2:
+            Crawling *baby = (Crawling*)[CCBReader load:@"Crawling"];
+            break;
+        case 3:
+            Crawling *baby = (Crawling*)[CCBReader load:@"Crawling"];
+            break;
+        default:
+            break;
+    }
+    
     
     // tableau de pourcentage de colonne
     NSMutableArray *array = [[NSMutableArray alloc] init];
