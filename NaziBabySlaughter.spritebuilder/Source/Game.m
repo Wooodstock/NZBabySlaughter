@@ -10,17 +10,23 @@
 #import "Ball.h"
 #import "Crawling.h"
 #import "poweredGun.h"
+#import <CoreMotion/CoreMotion.h>
 
 @implementation Game{
     CCNode *_player;
     CCNode *_contentNode;
     CCNode *_playerZone;
     CCPhysicsNode *_physicsWorld;
+    CMMotionManager *_motionManager;
 }
 
 
 // is called when CCB file has completed loading
 - (void)didLoadFromCCB {
+    
+    // Init the coremotionManager
+    _motionManager = [[CMMotionManager alloc] init];
+    
     _physicsWorld = [CCPhysicsNode node];
     _physicsWorld.gravity = ccp(0,0);
     _physicsWorld.debugDraw = YES;
@@ -56,7 +62,7 @@
     if(touchLocation.y > _playerZone.contentSize.height && touchLocation.x < _playerZone.contentSize.width && touchLocation.x > _playerZone.anchorPointInPoints.x)
     {
         // 4
-        PoweredGun *ball = (PoweredGun*)[CCBReader load:@"p:oweredGun"];
+        PoweredGun *ball = (PoweredGun*)[CCBReader load:@"poweredGun"];
         ball.position = CGPointMake(_player.position.x + _player.contentSize.width, _player.position.y + _player.contentSize.height);
         ball.physicsBody.collisionType  = @"ballCollision";
         [_physicsWorld addChild:ball ];
@@ -69,6 +75,24 @@
     }
     
     
+}
+
+- (void)onEnter {
+    [super onEnter];
+    [_motionManager startAccelerometerUpdates];
+}
+
+- (void)onExit {
+    [super onExit];
+    [_motionManager stopAccelerometerUpdates];
+}
+
+- (void)update:(CCTime)delta {
+    CMAccelerometerData *accelerometerData = _motionManager.accelerometerData;
+    CMAcceleration acceleration = accelerometerData.acceleration;
+    CGFloat newXPosition = _player.position.x + acceleration.x * 1000 * delta;
+    newXPosition = clampf(newXPosition, 0, _playerZone.contentSize.width);
+    _player.position = CGPointMake(newXPosition, _player.position.y);
 }
 
 
