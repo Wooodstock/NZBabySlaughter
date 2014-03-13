@@ -24,12 +24,13 @@
     CCPhysicsNode *_physicsWorld;
     CMMotionManager *_motionManager;
     CGPoint _lastTouchLocation;
+    double interval;
 }
 
 
 // is called when CCB file has completed loading
 - (void)didLoadFromCCB {
-    
+    interval = 3;
     // Init the coremotionManager
     _motionManager = [[CMMotionManager alloc] init];
     
@@ -60,7 +61,9 @@
     
     self.userInteractionEnabled = TRUE;
     [_player setVisible:true];
-    [self schedule:@selector(addBaby:) interval:1.5];
+    [self schedule:@selector(scheduleIt:) interval:interval];
+    [self schedule:@selector(addBaby:) interval:1];
+
     
     //Gesture
     UISwipeGestureRecognizer* rightRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
@@ -164,6 +167,16 @@
     }
 }
 
+-(void) scheduleIt:(CCTime)dt{
+    NSLog(@"resceduling");
+
+    if(interval > 0.1){
+        [self schedule:@selector(addBaby:) interval:interval];
+        interval = interval - 0.5;
+    }
+    
+}
+
 - (void)update:(CCTime)delta {
     CMAccelerometerData *accelerometerData = _motionManager.accelerometerData;
     CMAcceleration acceleration = accelerometerData.acceleration;
@@ -174,15 +187,35 @@
 
 
 - (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair babyCollision:(CCNode *)baby ballCollision:(CCNode *)ball {
-    [baby removeFromParent];
-    [ball removeFromParent];
+    
+    if([baby isKindOfClass:[Crawling class]]){
+        
+        if([ball isKindOfClass:[PoweredGun class]]){
+            [baby removeFromParent];
+            [ball removeFromParent];
+        }
+        NSLog(@"crawling going");
+    }
+    if([baby isKindOfClass:[GeneralBaby class]]){
+        if([ball isKindOfClass:[MegaGun class]]){
+            [baby removeFromParent];
+            [ball removeFromParent];
+        }
+        NSLog(@"general going");
+    }
+    if([baby isKindOfClass:[CaporalBaby class]]){
+        if([ball isKindOfClass:[Bullet class]]){
+            [baby removeFromParent];
+            [ball removeFromParent];
+        }
+        NSLog(@"caporal going");
+    }
+    
+    
     return YES;
 }
 
 - (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair babyCollision:(CCNode *)baby wallCollision:(CCNode *)wall {
-    if([wall isKindOfClass:@"Wall"]){
-        CCLOG(@"Je suis un wall hahahah");
-    }
     Wall *currentWall = (Wall*) wall;
     [currentWall destroy];
     [baby removeFromParent];
@@ -207,8 +240,6 @@
 
 - (void)addBaby:(CCTime)dt {
     
-    
-    
     int lowerBoundBaby = 0;
     int upperBoundBaby = 3;
     int rndValueBaby = lowerBoundBaby + arc4random() % (upperBoundBaby - lowerBoundBaby);
@@ -228,6 +259,7 @@
     Crawling *crawling;
     CaporalBaby *caporal;
     GeneralBaby *general;
+
     switch (rndValueBaby) {
         case 1:
         {
@@ -273,7 +305,7 @@
             [caporal runAction:[CCActionSequence actionWithArray:@[actionMoveCaporal,actionRemoveCaporal]]];
         }
             break;
-        case 3:
+        case 0:
         {
             general = (GeneralBaby*)[CCBReader load:@"GeneralBaby"];
             // 2

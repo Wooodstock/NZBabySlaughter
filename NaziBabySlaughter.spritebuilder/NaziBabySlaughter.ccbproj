@@ -90,6 +90,11 @@
 		</dict>
 		<key>Sprites</key>
 		<dict/>
+		<key>Sprites/player.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
 		<key>Walls</key>
 		<dict>
 			<key>isSmartSpriteSheet</key>
