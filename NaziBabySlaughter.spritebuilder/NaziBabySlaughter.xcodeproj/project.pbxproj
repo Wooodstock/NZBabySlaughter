@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06708D4818D39FE000A62DE0 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 06708D4718D39FE000A62DE0 /* GameOver.m */; };
 		068D189918D1FCC400EF4C44 /* SergentBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D189818D1FCC400EF4C44 /* SergentBaby.m */; };
 		06E204BF18D3733F008301CE /* GeneralHit.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E204BE18D3733F008301CE /* GeneralHit.m */; };
 		06E204C318D373AE008301CE /* SergentHit.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E204C218D373AE008301CE /* SergentHit.m */; };
@@ -68,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06708D4618D39FE000A62DE0 /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
+		06708D4718D39FE000A62DE0 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
 		068D189718D1FCC400EF4C44 /* SergentBaby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SergentBaby.h; path = Source/SergentBaby.h; sourceTree = "<group>"; };
 		068D189818D1FCC400EF4C44 /* SergentBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SergentBaby.m; path = Source/SergentBaby.m; sourceTree = "<group>"; };
 		06E204BD18D3733F008301CE /* GeneralHit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeneralHit.h; path = Source/GeneralHit.h; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 				06E204BE18D3733F008301CE /* GeneralHit.m */,
 				06E204C118D373AE008301CE /* SergentHit.h */,
 				06E204C218D373AE008301CE /* SergentHit.m */,
+				06708D4618D39FE000A62DE0 /* GameOver.h */,
+				06708D4718D39FE000A62DE0 /* GameOver.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				64B598D818D8B4FC00AE6472 /* Bullet.m in Sources */,
 				6427D05E18DA551200B17793 /* Crawling.m in Sources */,
+				06708D4818D39FE000A62DE0 /* GameOver.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				06E204C318D373AE008301CE /* SergentHit.m in Sources */,
 				64D4331818DA0E190065D49D /* MegaGun.m in Sources */,

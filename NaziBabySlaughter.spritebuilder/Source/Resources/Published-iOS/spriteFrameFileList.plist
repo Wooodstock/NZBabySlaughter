@@ -11,6 +11,8 @@
 	<array>
 		<string>Walls.plist</string>
 		<string>crawling.plist</string>
+		<string>greenProj.plist</string>
+		<string>Megagun.plist</string>
 	</array>
 </dict>
 </plist>

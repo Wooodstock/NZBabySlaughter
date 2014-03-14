@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>greenProj/1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{25, 1}, {22, 55}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {22, 55}}</string>
+			<key>sourceSize</key>
+			<string>{22, 55}</string>
+		</dict>
+		<key>greenProj/2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 58}, {22, 55}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {22, 55}}</string>
+			<key>sourceSize</key>
+			<string>{22, 55}</string>
+		</dict>
+		<key>greenProj/3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{25, 49}, {22, 52}}</string>
+			<key>offset</key>
+			<string>{0, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {22, 52}}</string>
+			<key>sourceSize</key>
+			<string>{22, 55}</string>
+		</dict>
+		<key>greenProj/4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{25, 25}, {22, 52}}</string>
+			<key>offset</key>
+			<string>{0, 1}</string>
+			<key>rotated</key>
+			<true/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {22, 52}}</string>
+			<key>sourceSize</key>
+			<string>{22, 55}</string>
+		</dict>
+		<key>greenProj/5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{82, 1}, {22, 54}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {22, 54}}</string>
+			<key>sourceSize</key>
+			<string>{22, 55}</string>
+		</dict>
+		<key>greenProj/6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {22, 55}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {22, 55}}</string>
+			<key>sourceSize</key>
+			<string>{22, 55}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{128, 128}</string>
+		<key>textureFileName</key>
+		<string>greenProj.png</string>
+	</dict>
+</dict>
+</plist>

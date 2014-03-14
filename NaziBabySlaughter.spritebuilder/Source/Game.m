@@ -14,6 +14,7 @@
 #import "SergentHit.h"
 #import "GeneralHit.h"
 #import "poweredGun.h"
+#import "GameOver.h"
 #import "Wall.h"
 #import "PoweredGun.h"
 #import "MegaGun.h"
@@ -45,7 +46,7 @@
     
     _physicsWorld = [CCPhysicsNode node];
     _physicsWorld.gravity = ccp(0,0);
-    //_physicsWorld.debugDraw = YES;
+    _physicsWorld.debugDraw = YES;
     _physicsWorld.collisionDelegate = self;
     
     [self addChild:_physicsWorld];
@@ -65,6 +66,12 @@
         
         [_physicsWorld addChild:wall];
     }
+    
+    GameOver *gameOver = (GameOver*)[CCBReader load:@"GameOver"];
+    gameOver.position = CGPointMake(_playerZone.anchorPoint.x, 0);
+    gameOver.physicsBody.collisionType  = @"gameOverCollision";
+    
+    [_physicsWorld addChild:gameOver];
     
     
     
@@ -296,6 +303,14 @@
     [baby removeFromParent];
     return YES;
 }
+
+- (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair babyCollision:(CCNode *)baby gameOverCollision:(CCNode *)gameOverNode {
+    
+    NSLog(@"Game Over !");
+    return YES;
+}
+
+
 
 - (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
