@@ -207,18 +207,41 @@
         [ball removeFromParent];
         NSLog(@"crawling going");
     }
+    if([baby isKindOfClass:[GeneralHit class]]){
+        
+        if([ball isKindOfClass:[PoweredGun class]]){
+            _score = _score + ZOMB_SCORE;
+            _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
+            [baby removeFromParent];
+        }
+        [ball removeFromParent];
+        NSLog(@"crawling going");
+    }
+    if([baby isKindOfClass:[SergentHit class]]){
+        
+        if([ball isKindOfClass:[MegaGun class]]){
+            _score = _score + ZOMB_SCORE;
+            _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
+            [baby removeFromParent];
+        }
+        [ball removeFromParent];
+        NSLog(@"crawling going");
+    }
+    
+    
     if([baby isKindOfClass:[GeneralBaby class]]){
         if([ball isKindOfClass:[PoweredGun class]]){
             _score = _score + ZOMB_SCORE;
-            _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];            [baby removeFromParent];
+            _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
+            [baby removeFromParent];
         }
         else if([ball isKindOfClass:[Bullet class]]){
+            [baby removeFromParent];
             GeneralHit *generalHit = (GeneralHit*)[CCBReader load:@"GeneralHit"];
             
             // 2
             generalHit.position = CGPointMake(baby.position.x, baby.position.y);
             generalHit.physicsBody.collisionType  = @"babyCollision";
-            [baby removeFromParent];
             [_physicsWorld addChild:generalHit];
             
             
@@ -238,7 +261,8 @@
     if([baby isKindOfClass:[SergentBaby class]]){
         if([ball isKindOfClass:[MegaGun class]]){
             _score = _score + ZOMB_SCORE;
-            _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];            [baby removeFromParent];
+            _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
+            [baby removeFromParent];
         }
         else if([ball isKindOfClass:[Bullet class]]){
             SergentHit *sergentHit = (SergentHit*)[CCBReader load:@"SergentHit"];

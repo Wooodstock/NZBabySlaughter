@@ -166,7 +166,7 @@
 						<key>value</key>
 						<array>
 							<real>7</real>
-							<real>-4.142857551574707</real>
+							<real>-7</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -372,7 +372,7 @@
 						<key>value</key>
 						<array>
 							<real>-7</real>
-							<real>-5.857142448425293</real>
+							<real>-3</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -577,8 +577,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>-6.9126982688903809</real>
-							<real>10.142856597900391</real>
+							<real>-6.9444441795349121</real>
+							<real>8</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -776,7 +776,7 @@
 						<key>value</key>
 						<array>
 							<real>6.5</real>
-							<real>8.8571434020996094</real>
+							<real>11</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1079,7 +1079,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>1.5714282989501953</real>
+						<real>-2</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1107,139 +1107,41 @@
 					</dict>
 				</array>
 			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string>GeneralBaby</string>
-				<key>displayName</key>
-				<string>CCSprite</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>physicsBody</key>
-				<dict>
-					<key>affectedByGravity</key>
-					<false/>
-					<key>allowsRotation</key>
-					<false/>
-					<key>bodyShape</key>
-					<integer>1</integer>
-					<key>cornerRadius</key>
-					<real>18.5</real>
-					<key>density</key>
-					<real>1</real>
-					<key>dynamic</key>
-					<true/>
-					<key>elasticity</key>
-					<real>0.30000001192092896</real>
-					<key>friction</key>
-					<real>0.30000001192092896</real>
-					<key>points</key>
-					<array>
-						<array>
-							<real>0.48046875</real>
-							<real>-1.10546875</real>
-						</array>
-					</array>
-				</dict>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>spriteFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string></string>
-							<string></string>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>color</string>
-						<key>type</key>
-						<string>Color3</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
-							<real>1</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>blendFunc</string>
-						<key>type</key>
-						<string>Blendmode</string>
-						<key>value</key>
-						<array>
-							<integer>770</integer>
-							<integer>771</integer>
-						</array>
-					</dict>
-				</array>
-			</dict>
 		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>GeneralHit</string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
 		<string></string>
 		<key>memberVarAssignmentType</key>
 		<integer>0</integer>
+		<key>physicsBody</key>
+		<dict>
+			<key>affectedByGravity</key>
+			<false/>
+			<key>allowsRotation</key>
+			<false/>
+			<key>bodyShape</key>
+			<integer>1</integer>
+			<key>cornerRadius</key>
+			<real>18.48828125</real>
+			<key>density</key>
+			<real>1</real>
+			<key>dynamic</key>
+			<true/>
+			<key>elasticity</key>
+			<real>0.30000001192092896</real>
+			<key>friction</key>
+			<real>0.30000001192092896</real>
+			<key>points</key>
+			<array>
+				<array>
+					<real>0.0</real>
+					<real>0.0</real>
+				</array>
+			</array>
+		</dict>
 		<key>properties</key>
 		<array>
 			<dict>
@@ -1354,7 +1256,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.80000001192092896</real>
+			<real>0.5</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
