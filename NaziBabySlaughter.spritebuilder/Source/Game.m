@@ -11,11 +11,17 @@
 #import "Crawling.h"
 #import "SergentBaby.h"
 #import "GeneralBaby.h"
+#import "SergentHit.h"
+#import "GeneralHit.h"
 #import "poweredGun.h"
 #import "Wall.h"
 #import "PoweredGun.h"
 #import "MegaGun.h"
 #import <CoreMotion/CoreMotion.h>
+
+#define ZOMB_SCORE 5
+#define ZOMB_Left_SCORE 5
+#define ZOMB_Right_SCORE 5
 
 @implementation Game{
     CCNode *_player;
@@ -25,6 +31,9 @@
     CMMotionManager *_motionManager;
     CGPoint _lastTouchLocation;
     double interval;
+    NSMutableArray *_columnArray;
+    int _score;
+    CCLabelTTF *_lifeLabel, *_scoreLabel;
 }
 
 
@@ -41,16 +50,16 @@
     
     [self addChild:_physicsWorld];
     
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*20/100)]];
-    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*35/100)]];
-    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*50/100)]];
-    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*65/100)]];
-    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*80/100)]];
+    _columnArray = [[NSMutableArray alloc] init];
+    [_columnArray addObject:[NSNumber numberWithDouble:(self.contentSize.width*20/100)]];
+    [_columnArray addObject:[NSNumber numberWithDouble:(self.contentSize.width*35/100)]];
+    [_columnArray addObject:[NSNumber numberWithDouble:(self.contentSize.width*50/100)]];
+    [_columnArray addObject:[NSNumber numberWithDouble:(self.contentSize.width*65/100)]];
+    [_columnArray addObject:[NSNumber numberWithDouble:(self.contentSize.width*80/100)]];
 
     for (int i = 0; i < 5; i++) {
         Wall *wall = (Wall*)[CCBReader load:@"Wall"];
-        wall.position = CGPointMake([[array objectAtIndex:i] floatValue], _playerZone.contentSize.height + wall.contentSize.height/2);
+        wall.position = CGPointMake([[_columnArray objectAtIndex:i] floatValue], _playerZone.contentSize.height + wall.contentSize.height/2);
         wall.physicsBody.collisionType  = @"wallCollision";
         wall.physicsBody.collisionGroup = @"player";
         
@@ -191,6 +200,8 @@
     if([baby isKindOfClass:[Crawling class]]){
         
         if([ball isKindOfClass:[Bullet class]]){
+            _score = _score + ZOMB_SCORE;
+            _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
             [baby removeFromParent];
         }
         [ball removeFromParent];
@@ -198,20 +209,60 @@
     }
     if([baby isKindOfClass:[GeneralBaby class]]){
         if([ball isKindOfClass:[PoweredGun class]]){
+            _score = _score + ZOMB_SCORE;
+            _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];            [baby removeFromParent];
+        }
+        else if([ball isKindOfClass:[Bullet class]]){
+            GeneralHit *generalHit = (GeneralHit*)[CCBReader load:@"GeneralHit"];
+            
+            // 2
+            generalHit.position = CGPointMake(baby.position.x, baby.position.y);
+            generalHit.physicsBody.collisionType  = @"babyCollision";
             [baby removeFromParent];
+            [_physicsWorld addChild:generalHit];
+            
+            
+            double vitesseZomb = (self.contentSize.height + generalHit.contentSize.height/2)/ 10;
+            
+            // Réglage de la vitesse, ici 2
+            double temps = baby.position.y/(vitesseZomb*2);
+            
+            // 4
+            CCAction *actionMove = [CCActionMoveTo actionWithDuration:temps position:CGPointMake(baby.position.x, -generalHit.contentSize.height/2)];
+            CCAction *actionRemove = [CCActionRemove action];
+            [generalHit runAction:[CCActionSequence actionWithArray:@[actionMove,actionRemove]]];
         }
         [ball removeFromParent];
         NSLog(@"general going");
     }
     if([baby isKindOfClass:[SergentBaby class]]){
         if([ball isKindOfClass:[MegaGun class]]){
+            _score = _score + ZOMB_SCORE;
+            _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];            [baby removeFromParent];
+        }
+        else if([ball isKindOfClass:[Bullet class]]){
+            SergentHit *sergentHit = (SergentHit*)[CCBReader load:@"SergentHit"];
+            
+            // 2
+            sergentHit.position = CGPointMake(baby.position.x, baby.position.y);
+            sergentHit.physicsBody.collisionType  = @"babyCollision";
             [baby removeFromParent];
+            [_physicsWorld addChild:sergentHit];
+            
+            
+            double vitesseZomb = (self.contentSize.height + sergentHit.contentSize.height/2)/ 10;
+            
+            // Réglage de la vitesse, ici 2
+            double temps = baby.position.y/(vitesseZomb*2);
+            
+            // 4
+            CCAction *actionMove = [CCActionMoveTo actionWithDuration:temps position:CGPointMake(baby.position.x, -sergentHit.contentSize.height/2)];
+            CCAction *actionRemove = [CCActionRemove action];
+            [sergentHit runAction:[CCActionSequence actionWithArray:@[actionMove,actionRemove]]];
         }
         [ball removeFromParent];
         NSLog(@"caporal going");
     }
-    
-    
     return YES;
 }
 
@@ -244,13 +295,6 @@
     int upperBoundBaby = 3;
     int rndValueBaby = lowerBoundBaby + arc4random() % (upperBoundBaby - lowerBoundBaby);
     
-    // tableau de pourcentage de colonne
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*20/100)]];
-    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*35/100)]];
-    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*50/100)]];
-    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*65/100)]];
-    [array addObject:[NSNumber numberWithDouble:(self.contentSize.width*80/100)]];
     
     int lowerBound = 0;
     int upperBound = 5;
@@ -267,19 +311,12 @@
             crawling = (Crawling*)[CCBReader load:@"Crawling"];
 
             // 2
-            crawling.position = CGPointMake([[array objectAtIndex:rndValue] floatValue], self.contentSize.height + crawling.contentSize.height/2);
-            //baby.physicsBody = [CCPhysicsBody bodyWithRect:(CGRect){CGPointZero, baby.contentSize} cornerRadius:0];
+            crawling.position = CGPointMake([[_columnArray objectAtIndex:rndValue] floatValue], self.contentSize.height + crawling.contentSize.height/2);
             crawling.physicsBody.collisionType  = @"babyCollision";
             [_physicsWorld addChild:crawling];
             
-            // 3 - setup of zombies speed
-            /*int minDuration = 2.0;
-             int maxDuration = 4.0;
-             int rangeDuration = maxDuration - minDuration;
-             int randomDuration = (arc4random() % rangeDuration) + minDuration;*/
-            
             // 4
-            CCAction *actionMove = [CCActionMoveTo actionWithDuration:10.0 position:CGPointMake([[array objectAtIndex:rndValue] floatValue], -crawling.contentSize.height/2)];
+            CCAction *actionMove = [CCActionMoveTo actionWithDuration:10.0 position:CGPointMake([[_columnArray objectAtIndex:rndValue] floatValue], -crawling.contentSize.height/2)];
             CCAction *actionRemove = [CCActionRemove action];
             [crawling runAction:[CCActionSequence actionWithArray:@[actionMove,actionRemove]]];
         }
@@ -288,8 +325,7 @@
         {
             sergent = (SergentBaby*)[CCBReader load:@"SergentBaby"];
             // 2
-            sergent.position = CGPointMake([[array objectAtIndex:rndValue] floatValue], self.contentSize.height + sergent.contentSize.height/2);
-            //baby.physicsBody = [CCPhysicsBody bodyWithRect:(CGRect){CGPointZero, baby.contentSize} cornerRadius:0];
+            sergent.position = CGPointMake([[_columnArray objectAtIndex:rndValue] floatValue], self.contentSize.height + sergent.contentSize.height/2);
             sergent.physicsBody.collisionType  = @"babyCollision";
             [_physicsWorld addChild:sergent];
             
@@ -300,7 +336,7 @@
              int randomDuration = (arc4random() % rangeDuration) + minDuration;*/
             
             // 4
-            CCAction *actionMoveSergent = [CCActionMoveTo actionWithDuration:10.0 position:CGPointMake([[array objectAtIndex:rndValue] floatValue], -sergent.contentSize.height/2)];
+            CCAction *actionMoveSergent = [CCActionMoveTo actionWithDuration:10.0 position:CGPointMake([[_columnArray objectAtIndex:rndValue] floatValue], -sergent.contentSize.height/2)];
             CCAction *actionRemoveSergent = [CCActionRemove action];
             [sergent runAction:[CCActionSequence actionWithArray:@[actionMoveSergent,actionRemoveSergent]]];
         }
@@ -309,7 +345,7 @@
         {
             general = (GeneralBaby*)[CCBReader load:@"GeneralBaby"];
             // 2
-            general.position = CGPointMake([[array objectAtIndex:rndValue] floatValue], self.contentSize.height + general.contentSize.height/2);
+            general.position = CGPointMake([[_columnArray objectAtIndex:rndValue] floatValue], self.contentSize.height + general.contentSize.height/2);
             //baby.physicsBody = [CCPhysicsBody bodyWithRect:(CGRect){CGPointZero, baby.contentSize} cornerRadius:0];
             general.physicsBody.collisionType  = @"babyCollision";
             [_physicsWorld addChild:general];
@@ -321,7 +357,7 @@
              int randomDuration = (arc4random() % rangeDuration) + minDuration;*/
             
             // 4
-            CCAction *actionMoveGeneral = [CCActionMoveTo actionWithDuration:10.0 position:CGPointMake([[array objectAtIndex:rndValue] floatValue], -general.contentSize.height/2)];
+            CCAction *actionMoveGeneral = [CCActionMoveTo actionWithDuration:10.0 position:CGPointMake([[_columnArray objectAtIndex:rndValue] floatValue], -general.contentSize.height/2)];
             CCAction *actionRemoveGeneral = [CCActionRemove action];
             [general runAction:[CCActionSequence actionWithArray:@[actionMoveGeneral,actionRemoveGeneral]]];
         }

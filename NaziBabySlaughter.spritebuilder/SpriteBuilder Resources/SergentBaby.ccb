@@ -130,7 +130,7 @@
 						<key>value</key>
 						<array>
 							<real>7</real>
-							<real>-4.3333334922790527</real>
+							<real>-4.5999999046325684</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -300,7 +300,7 @@
 						<key>value</key>
 						<array>
 							<real>-7</real>
-							<real>-5.6666665077209473</real>
+							<real>-5.4000000953674316</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -469,8 +469,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>-6.9148149490356445</real>
-							<real>10</real>
+							<real>-6.9177775382995605</real>
+							<real>9.8000001907348633</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -632,7 +632,7 @@
 						<key>value</key>
 						<array>
 							<real>6.5</real>
-							<real>9</real>
+							<real>9.1999998092651367</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -936,7 +936,7 @@
 						<key>value</key>
 						<array>
 							<real>0.0</real>
-							<real>0.66666662693023682</real>
+							<real>0.60000002384185791</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -974,7 +974,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>3.3333330154418945</real>
+						<real>3</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1145,15 +1145,15 @@
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>-1</integer>
+			<integer>0</integer>
 			<key>length</key>
-			<real>10</real>
+			<real>1</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1</real>
+			<real>0.69999998807907104</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
