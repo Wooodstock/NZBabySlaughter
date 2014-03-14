@@ -34,7 +34,7 @@
     double interval;
     NSMutableArray *_columnArray;
     int _score;
-    CCLabelTTF *_lifeLabel, *_scoreLabel;
+    CCLabelTTF *_scoreLabel;
 }
 
 
@@ -307,6 +307,9 @@
 - (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair babyCollision:(CCNode *)baby gameOverCollision:(CCNode *)gameOverNode {
     
     NSLog(@"Game Over !");
+    
+    CCScene *mainMenuScene = [CCBReader loadAsScene:@"MainScene"];
+    [[CCDirector sharedDirector] replaceScene:mainMenuScene];
     return YES;
 }
 
