@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		06708D4818D39FE000A62DE0 /* GameOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 06708D4718D39FE000A62DE0 /* GameOver.m */; };
+		06708D4E18D3C76600A62DE0 /* Death.m in Sources */ = {isa = PBXBuildFile; fileRef = 06708D4D18D3C76600A62DE0 /* Death.m */; };
 		068D189918D1FCC400EF4C44 /* SergentBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 068D189818D1FCC400EF4C44 /* SergentBaby.m */; };
 		06E204BF18D3733F008301CE /* GeneralHit.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E204BE18D3733F008301CE /* GeneralHit.m */; };
 		06E204C318D373AE008301CE /* SergentHit.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E204C218D373AE008301CE /* SergentHit.m */; };
@@ -82,6 +83,8 @@
 /* Begin PBXFileReference section */
 		06708D4618D39FE000A62DE0 /* GameOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOver.h; sourceTree = "<group>"; };
 		06708D4718D39FE000A62DE0 /* GameOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOver.m; sourceTree = "<group>"; };
+		06708D4C18D3C76600A62DE0 /* Death.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Death.h; path = Source/Death.h; sourceTree = "<group>"; };
+		06708D4D18D3C76600A62DE0 /* Death.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Death.m; path = Source/Death.m; sourceTree = "<group>"; };
 		068D189718D1FCC400EF4C44 /* SergentBaby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SergentBaby.h; path = Source/SergentBaby.h; sourceTree = "<group>"; };
 		068D189818D1FCC400EF4C44 /* SergentBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SergentBaby.m; path = Source/SergentBaby.m; sourceTree = "<group>"; };
 		06E204BD18D3733F008301CE /* GeneralHit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeneralHit.h; path = Source/GeneralHit.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				06E204C218D373AE008301CE /* SergentHit.m */,
 				06708D4618D39FE000A62DE0 /* GameOver.h */,
 				06708D4718D39FE000A62DE0 /* GameOver.m */,
+				06708D4C18D3C76600A62DE0 /* Death.h */,
+				06708D4D18D3C76600A62DE0 /* Death.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -456,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6427D06218DA553F00B17793 /* GeneralBaby.m in Sources */,
+				06708D4E18D3C76600A62DE0 /* Death.m in Sources */,
 				6415C5BD18D77218002B0435 /* Player.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				6427D06518DA556000B17793 /* CaporalBaby.m in Sources */,

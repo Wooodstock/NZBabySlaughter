@@ -15,6 +15,7 @@
 #import "GeneralHit.h"
 #import "poweredGun.h"
 #import "GameOver.h"
+#import "Death.h"
 #import "Wall.h"
 #import "PoweredGun.h"
 #import "MegaGun.h"
@@ -254,6 +255,7 @@
         if([ball isKindOfClass:[Bullet class]]){
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
+            [self destructionIn:baby.position];
             [self playSoundDie];
             [baby removeFromParent];
         }
@@ -265,6 +267,7 @@
         if([ball isKindOfClass:[PoweredGun class]]){
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
+            [self destructionIn:baby.position];
             [self playSoundDie];
             [baby removeFromParent];
         }
@@ -277,6 +280,7 @@
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
             [baby removeFromParent];
+            [self destructionIn:baby.position];
             [self playSoundDie];
         }
         [ball removeFromParent];
@@ -289,6 +293,9 @@
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
             [baby removeFromParent];
+            
+            
+            [self destructionIn:baby.position];
             [self playSoundDie];
         }
         else if([ball isKindOfClass:[Bullet class]]){
@@ -321,6 +328,7 @@
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
             [baby removeFromParent];
+            [self destructionIn:baby.position];
             [self playSoundDie];
         }
         else if([ball isKindOfClass:[Bullet class]]){
@@ -382,6 +390,25 @@
 -(void) touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
     // when touches are cancelled
+}
+
+-(void) destructionIn:(CGPoint)location {
+
+    // Draw a little flash at it's last position
+    Death *death = (Death*)[CCBReader load:@"Death"];
+	death.position = location;
+	[self addChild:death];
+    
+	float duration = 2;
+	[death runAction:[CCActionSequence actions:
+                       [CCActionSpawn actions:
+                        [CCActionFadeOut actionWithDuration:duration],
+                        [CCActionScaleTo actionWithDuration:duration scale:0.25],
+                        nil
+                        ],
+                       [CCActionRemove action],
+                       nil
+                       ]];
 }
 
 
