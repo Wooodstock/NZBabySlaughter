@@ -301,7 +301,7 @@
             [self destructionIn:baby.position];
             [self playSoundDie];
         }
-        else if([ball isKindOfClass:[Bullet class]]){
+        else if([ball isKindOfClass:[Bullet class]] || [ball isKindOfClass:[MegaGun class]]){
             [baby removeFromParent];
             [audio playEffect:@"ricochet.wav"];
 
@@ -327,14 +327,14 @@
         NSLog(@"general going");
     }
     if([baby isKindOfClass:[SergentBaby class]]){
-        if([ball isKindOfClass:[MegaGun class]]){
+        if([ball isKindOfClass:[MegaGun class]] ){
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
             [baby removeFromParent];
             [self destructionIn:baby.position];
             [self playSoundDie];
         }
-        else if([ball isKindOfClass:[Bullet class]]){
+        else if([ball isKindOfClass:[Bullet class]]  || [ball isKindOfClass:[PoweredGun class]]){
             SergentHit *sergentHit = (SergentHit*)[CCBReader load:@"SergentHit"];
             
             // 2
