@@ -154,11 +154,11 @@
     // if zone du baby
     //if(_lastTouchLocation.y > _playerZone.contentSize.height && _lastTouchLocation.x < _playerZone.contentSize.width && _lastTouchLocation.x > _playerZone.anchorPointInPoints.x)
     Bullet *bullet = (Bullet*)[CCBReader load:@"bullet"];
-    bullet.position = CGPointMake(_player.position.x + _player.contentSize.width, _player.position.y + _player.contentSize.height);
+    bullet.position = CGPointMake(_player.position.x + _player.contentSize.width +26, _player.position.y + _player.contentSize.height);
     bullet.physicsBody.collisionType  = @"ballCollision";
     [_physicsWorld addChild:bullet];
     
-    CGPoint targetPosition = CGPointMake(_player.position.x + _player.contentSize.width, self.contentSize.height + bullet.contentSize.height/2);
+    CGPoint targetPosition = CGPointMake(_player.position.x + _player.contentSize.width +26, self.contentSize.height + bullet.contentSize.height/2);
     
     CCActionMoveTo *actionMove   = [CCActionMoveTo actionWithDuration:1.5f position:targetPosition];
     CCActionRemove *actionRemove = [CCActionRemove action];
@@ -171,11 +171,11 @@
     {
         CCLOG(@"Right Swipe");
         PoweredGun *poweredGun = (PoweredGun*)[CCBReader load:@"poweredGun"];
-        poweredGun.position = CGPointMake(_player.position.x + _player.contentSize.width, _player.position.y + _player.contentSize.height);
+        poweredGun.position = CGPointMake(_player.position.x + _player.contentSize.width +26, _player.position.y + _player.contentSize.height);
         poweredGun.physicsBody.collisionType  = @"ballCollision";
         [_physicsWorld addChild:poweredGun];
         
-        CGPoint targetPosition = CGPointMake(_player.position.x + _player.contentSize.width, self.contentSize.height + poweredGun.contentSize.height/2);
+        CGPoint targetPosition = CGPointMake(_player.position.x + _player.contentSize.width +26, self.contentSize.height + poweredGun.contentSize.height/2);
         
         CCActionMoveTo *actionMove   = [CCActionMoveTo actionWithDuration:1.5f position:targetPosition];
         CCActionRemove *actionRemove = [CCActionRemove action];
@@ -185,11 +185,11 @@
     {
         CCLOG(@"Left Swipe");
         MegaGun *megaGun = (MegaGun*)[CCBReader load:@"megaGun"];
-        megaGun.position = CGPointMake(_player.position.x + _player.contentSize.width, _player.position.y + _player.contentSize.height);
+        megaGun.position = CGPointMake(_player.position.x + _player.contentSize.width + 26, _player.position.y + _player.contentSize.height);
         megaGun.physicsBody.collisionType  = @"ballCollision";
         [_physicsWorld addChild:megaGun];
         
-        CGPoint targetPosition = CGPointMake(_player.position.x + _player.contentSize.width, self.contentSize.height + megaGun.contentSize.height/2);
+        CGPoint targetPosition = CGPointMake(_player.position.x + _player.contentSize.width +26, self.contentSize.height + megaGun.contentSize.height/2);
         
         CCActionMoveTo *actionMove   = [CCActionMoveTo actionWithDuration:1.5f position:targetPosition];
         CCActionRemove *actionRemove = [CCActionRemove action];
