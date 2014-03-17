@@ -90,6 +90,8 @@
 		</dict>
 		<key>Sprites</key>
 		<dict/>
+		<key>background.png</key>
+		<dict/>
 		<key>ccbResources</key>
 		<dict>
 			<key>previewFolderHidden</key>
