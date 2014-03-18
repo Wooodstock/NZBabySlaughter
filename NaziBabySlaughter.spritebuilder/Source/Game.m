@@ -9,10 +9,9 @@
 #import "Game.h"
 
 @implementation Game{
-  
     CCNode *_player;
     CCNode *_contentNode;
-    
+    CCNode *_playerZone;
 }
 
 
@@ -20,23 +19,38 @@
 - (void)didLoadFromCCB {
     
     self.userInteractionEnabled = TRUE;
-    
+    [_player setVisible:true];
 }
 
 #pragma mark - Touch Handling
 
 -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
+    NSLog(@"player x : %f", _player.position.x);
+    NSLog(@"player y : %f", _player.position.y);
     
-    CGPoint touchLocation = [touch locationInNode:_contentNode];
-     _player.position = touchLocation;
+    NSLog(@"Content size height of playerZone y : %f", _playerZone.contentSize.height );
+    
+    
+    CGPoint touchLocation = [touch locationInNode:_playerZone];
+    
+    NSLog(@"Touch Location y : %f", touchLocation.y);
+
+    
+    if(touchLocation.y < _playerZone.contentSize.height && touchLocation.x < _playerZone.contentSize.width && touchLocation.x > _playerZone.anchorPointInPoints.x)
+    {
+        [_player setPosition:ccp(touchLocation.x, _player.position.y)];
     }
+}
 
 - (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
     // whenever touches move, update the position of the mouseJointNode to the touch position
-    CGPoint touchLocation = [touch locationInNode:_contentNode];
-    _player.position = touchLocation;
+    CGPoint touchLocation = [touch locationInNode:_playerZone];
+    if(touchLocation.y < _playerZone.contentSize.height && touchLocation.x < _playerZone.contentSize.width && touchLocation.x > _playerZone.anchorPointInPoints.x)
+    {
+        [_player setPosition:ccp(touchLocation.x, _player.position.y)];
+    }
 }
 
 -(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
