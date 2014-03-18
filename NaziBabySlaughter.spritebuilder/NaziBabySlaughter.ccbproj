@@ -174,10 +174,15 @@
 			<key>tabletScale</key>
 			<integer>1</integer>
 		</dict>
+		<key>crawling</key>
+		<dict>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>versionStr</key>
-	<string>Version: 1.0.4
-GitHub: 00a3af1cfa
+	<string>Version: 1.0.3
+GitHub: 9026dcdd50
 </string>
 </dict>
 </plist>

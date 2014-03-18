@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>crawling/head.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {136, 117}}</string>
+			<key>offset</key>
+			<string>{-1, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{31, 42}, {136, 117}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>crawling/member.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{139, 59}, {36, 136}}</string>
+			<key>offset</key>
+			<string>{0, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{82, 30}, {36, 136}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+		<key>crawling/pampers.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{139, 1}, {99, 56}}</string>
+			<key>offset</key>
+			<string>{0, 9}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{50, 63}, {99, 56}}</string>
+			<key>sourceSize</key>
+			<string>{200, 200}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{256, 256}</string>
+		<key>textureFileName</key>
+		<string>crawling.png</string>
+	</dict>
+</dict>
+</plist>
