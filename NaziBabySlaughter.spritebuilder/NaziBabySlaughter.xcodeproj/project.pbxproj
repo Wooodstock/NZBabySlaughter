@@ -10,6 +10,30 @@
 		069A548C18D0C5EA008F36AE /* Crawling.m in Sources */ = {isa = PBXBuildFile; fileRef = 069A548B18D0C5EA008F36AE /* Crawling.m */; };
 		6415C5BD18D77218002B0435 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415C5BC18D77218002B0435 /* Player.m */; };
 		6415C5C318D779A0002B0435 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415C5C218D779A0002B0435 /* Game.m */; };
+		6418A89F18D8F7C700B3F39E /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A87218D8F7C600B3F39E /* CDataScanner.m */; };
+		6418A8A018D8F7C700B3F39E /* D.json in Resources */ = {isa = PBXBuildFile; fileRef = 6418A87318D8F7C600B3F39E /* D.json */; };
+		6418A8A118D8F7C700B3F39E /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A87618D8F7C600B3F39E /* CFilteringJSONSerializer.m */; };
+		6418A8A218D8F7C700B3F39E /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A87818D8F7C600B3F39E /* CJSONDeserializer_BlocksExtensions.m */; };
+		6418A8A318D8F7C700B3F39E /* CJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A87A18D8F7C600B3F39E /* CJSONSerialization.m */; };
+		6418A8A418D8F7C700B3F39E /* CJSONSerializedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A87C18D8F7C600B3F39E /* CJSONSerializedData.m */; };
+		6418A8A518D8F7C700B3F39E /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A87F18D8F7C600B3F39E /* CDataScanner_Extensions.m */; };
+		6418A8A618D8F7C700B3F39E /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A88118D8F7C600B3F39E /* NSDictionary_JSONExtensions.m */; };
+		6418A8A718D8F7C700B3F39E /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A88418D8F7C600B3F39E /* CJSONDeserializer.m */; };
+		6418A8A818D8F7C700B3F39E /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A88618D8F7C600B3F39E /* CJSONScanner.m */; };
+		6418A8A918D8F7C700B3F39E /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A88818D8F7C600B3F39E /* CJSONSerializer.m */; };
+		6418A8AA18D8F7C700B3F39E /* N.json in Resources */ = {isa = PBXBuildFile; fileRef = 6418A88A18D8F7C600B3F39E /* N.json */; };
+		6418A8AB18D8F7C700B3F39E /* ndollar.js in Sources */ = {isa = PBXBuildFile; fileRef = 6418A88B18D8F7C600B3F39E /* ndollar.js */; };
+		6418A8AC18D8F7C700B3F39E /* P.json in Resources */ = {isa = PBXBuildFile; fileRef = 6418A88C18D8F7C600B3F39E /* P.json */; };
+		6418A8AD18D8F7C700B3F39E /* protractor-chi2010.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6418A88D18D8F7C600B3F39E /* protractor-chi2010.pdf */; };
+		6418A8AE18D8F7C700B3F39E /* T.json in Resources */ = {isa = PBXBuildFile; fileRef = 6418A88E18D8F7C600B3F39E /* T.json */; };
+		6418A8AF18D8F7C700B3F39E /* WTMDetectionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A89018D8F7C600B3F39E /* WTMDetectionResult.m */; };
+		6418A8B018D8F7C700B3F39E /* WTMGlyph.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A89318D8F7C600B3F39E /* WTMGlyph.m */; };
+		6418A8B118D8F7C700B3F39E /* WTMGlyphDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A89518D8F7C600B3F39E /* WTMGlyphDefaults.m */; };
+		6418A8B218D8F7C700B3F39E /* WTMGlyphDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A89818D8F7C600B3F39E /* WTMGlyphDetector.m */; };
+		6418A8B318D8F7C700B3F39E /* WTMGlyphStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A89A18D8F7C600B3F39E /* WTMGlyphStroke.m */; };
+		6418A8B418D8F7C700B3F39E /* WTMGlyphTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A89C18D8F7C700B3F39E /* WTMGlyphTemplate.m */; };
+		6418A8B518D8F7C700B3F39E /* WTMGlyphUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A89E18D8F7C700B3F39E /* WTMGlyphUtilities.m */; };
+		6418A8B818D9132C00B3F39E /* squarre.json in Resources */ = {isa = PBXBuildFile; fileRef = 6418A8B718D9132C00B3F39E /* squarre.json */; };
 		64B598D818D8B4FC00AE6472 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B598D718D8B4FC00AE6472 /* Ball.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -59,12 +83,55 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		069A548A18D0C5EA008F36AE /* Crawling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Crawling.h; path = Source/Crawling.h; sourceTree = "<group>"; };
 		069A548B18D0C5EA008F36AE /* Crawling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Crawling.m; path = Source/Crawling.m; sourceTree = "<group>"; };
 		6415C5BB18D77218002B0435 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = Source/Player.h; sourceTree = "<group>"; };
 		6415C5BC18D77218002B0435 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Source/Player.m; sourceTree = "<group>"; };
 		6415C5C118D779A0002B0435 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = Source/Game.h; sourceTree = "<group>"; };
 		6415C5C218D779A0002B0435 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Game.m; path = Source/Game.m; sourceTree = "<group>"; };
+		6418A87118D8F7C600B3F39E /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
+		6418A87218D8F7C600B3F39E /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
+		6418A87318D8F7C600B3F39E /* D.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = D.json; sourceTree = "<group>"; };
+		6418A87518D8F7C600B3F39E /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
+		6418A87618D8F7C600B3F39E /* CFilteringJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFilteringJSONSerializer.m; sourceTree = "<group>"; };
+		6418A87718D8F7C600B3F39E /* CJSONDeserializer_BlocksExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer_BlocksExtensions.h; sourceTree = "<group>"; };
+		6418A87818D8F7C600B3F39E /* CJSONDeserializer_BlocksExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer_BlocksExtensions.m; sourceTree = "<group>"; };
+		6418A87918D8F7C600B3F39E /* CJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerialization.h; sourceTree = "<group>"; };
+		6418A87A18D8F7C600B3F39E /* CJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerialization.m; sourceTree = "<group>"; };
+		6418A87B18D8F7C600B3F39E /* CJSONSerializedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializedData.h; sourceTree = "<group>"; };
+		6418A87C18D8F7C600B3F39E /* CJSONSerializedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializedData.m; sourceTree = "<group>"; };
+		6418A87E18D8F7C600B3F39E /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
+		6418A87F18D8F7C600B3F39E /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
+		6418A88018D8F7C600B3F39E /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		6418A88118D8F7C600B3F39E /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
+		6418A88318D8F7C600B3F39E /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		6418A88418D8F7C600B3F39E /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		6418A88518D8F7C600B3F39E /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
+		6418A88618D8F7C600B3F39E /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
+		6418A88718D8F7C600B3F39E /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		6418A88818D8F7C600B3F39E /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		6418A88918D8F7C600B3F39E /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		6418A88A18D8F7C600B3F39E /* N.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = N.json; sourceTree = "<group>"; };
+		6418A88B18D8F7C600B3F39E /* ndollar.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ndollar.js; sourceTree = "<group>"; };
+		6418A88C18D8F7C600B3F39E /* P.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = P.json; sourceTree = "<group>"; };
+		6418A88D18D8F7C600B3F39E /* protractor-chi2010.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "protractor-chi2010.pdf"; sourceTree = "<group>"; };
+		6418A88E18D8F7C600B3F39E /* T.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = T.json; sourceTree = "<group>"; };
+		6418A88F18D8F7C600B3F39E /* WTMDetectionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMDetectionResult.h; sourceTree = "<group>"; };
+		6418A89018D8F7C600B3F39E /* WTMDetectionResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMDetectionResult.m; sourceTree = "<group>"; };
+		6418A89118D8F7C600B3F39E /* WTMGlyph-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WTMGlyph-Prefix.pch"; sourceTree = "<group>"; };
+		6418A89218D8F7C600B3F39E /* WTMGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyph.h; sourceTree = "<group>"; };
+		6418A89318D8F7C600B3F39E /* WTMGlyph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMGlyph.m; sourceTree = "<group>"; };
+		6418A89418D8F7C600B3F39E /* WTMGlyphDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphDefaults.h; sourceTree = "<group>"; };
+		6418A89518D8F7C600B3F39E /* WTMGlyphDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMGlyphDefaults.m; sourceTree = "<group>"; };
+		6418A89618D8F7C600B3F39E /* WTMGlyphDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphDelegate.h; sourceTree = "<group>"; };
+		6418A89718D8F7C600B3F39E /* WTMGlyphDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphDetector.h; sourceTree = "<group>"; };
+		6418A89818D8F7C600B3F39E /* WTMGlyphDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMGlyphDetector.m; sourceTree = "<group>"; };
+		6418A89918D8F7C600B3F39E /* WTMGlyphStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphStroke.h; sourceTree = "<group>"; };
+		6418A89A18D8F7C600B3F39E /* WTMGlyphStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMGlyphStroke.m; sourceTree = "<group>"; };
+		6418A89B18D8F7C600B3F39E /* WTMGlyphTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphTemplate.h; sourceTree = "<group>"; };
+		6418A89C18D8F7C700B3F39E /* WTMGlyphTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMGlyphTemplate.m; sourceTree = "<group>"; };
+		6418A89D18D8F7C700B3F39E /* WTMGlyphUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphUtilities.h; sourceTree = "<group>"; };
+		6418A89E18D8F7C700B3F39E /* WTMGlyphUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMGlyphUtilities.m; sourceTree = "<group>"; };
+		6418A8B718D9132C00B3F39E /* squarre.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = squarre.json; sourceTree = "<group>"; };
 		64B598D618D8B4FC00AE6472 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ball.h; path = Source/Ball.h; sourceTree = "<group>"; };
 		64B598D718D8B4FC00AE6472 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ball.m; path = Source/Ball.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
@@ -128,12 +195,85 @@
 			children = (
 				6415C5BB18D77218002B0435 /* Player.h */,
 				6415C5BC18D77218002B0435 /* Player.m */,
-				6415C5BE18D77620002B0435 /* Baby.h */,
-				6415C5BF18D77620002B0435 /* Baby.m */,
 				64B598D618D8B4FC00AE6472 /* Ball.h */,
 				64B598D718D8B4FC00AE6472 /* Ball.m */,
 			);
 			name = Sprites;
+			sourceTree = "<group>";
+		};
+		6418A87018D8F7C600B3F39E /* WTMGlyph */ = {
+			isa = PBXGroup;
+			children = (
+				6418A8B718D9132C00B3F39E /* squarre.json */,
+				6418A87118D8F7C600B3F39E /* CDataScanner.h */,
+				6418A87218D8F7C600B3F39E /* CDataScanner.m */,
+				6418A87318D8F7C600B3F39E /* D.json */,
+				6418A87418D8F7C600B3F39E /* Experimental */,
+				6418A87D18D8F7C600B3F39E /* Extensions */,
+				6418A88218D8F7C600B3F39E /* JSON */,
+				6418A88A18D8F7C600B3F39E /* N.json */,
+				6418A88B18D8F7C600B3F39E /* ndollar.js */,
+				6418A88C18D8F7C600B3F39E /* P.json */,
+				6418A88D18D8F7C600B3F39E /* protractor-chi2010.pdf */,
+				6418A88E18D8F7C600B3F39E /* T.json */,
+				6418A88F18D8F7C600B3F39E /* WTMDetectionResult.h */,
+				6418A89018D8F7C600B3F39E /* WTMDetectionResult.m */,
+				6418A89118D8F7C600B3F39E /* WTMGlyph-Prefix.pch */,
+				6418A89218D8F7C600B3F39E /* WTMGlyph.h */,
+				6418A89318D8F7C600B3F39E /* WTMGlyph.m */,
+				6418A89418D8F7C600B3F39E /* WTMGlyphDefaults.h */,
+				6418A89518D8F7C600B3F39E /* WTMGlyphDefaults.m */,
+				6418A89618D8F7C600B3F39E /* WTMGlyphDelegate.h */,
+				6418A89718D8F7C600B3F39E /* WTMGlyphDetector.h */,
+				6418A89818D8F7C600B3F39E /* WTMGlyphDetector.m */,
+				6418A89918D8F7C600B3F39E /* WTMGlyphStroke.h */,
+				6418A89A18D8F7C600B3F39E /* WTMGlyphStroke.m */,
+				6418A89B18D8F7C600B3F39E /* WTMGlyphTemplate.h */,
+				6418A89C18D8F7C700B3F39E /* WTMGlyphTemplate.m */,
+				6418A89D18D8F7C700B3F39E /* WTMGlyphUtilities.h */,
+				6418A89E18D8F7C700B3F39E /* WTMGlyphUtilities.m */,
+			);
+			path = WTMGlyph;
+			sourceTree = "<group>";
+		};
+		6418A87418D8F7C600B3F39E /* Experimental */ = {
+			isa = PBXGroup;
+			children = (
+				6418A87518D8F7C600B3F39E /* CFilteringJSONSerializer.h */,
+				6418A87618D8F7C600B3F39E /* CFilteringJSONSerializer.m */,
+				6418A87718D8F7C600B3F39E /* CJSONDeserializer_BlocksExtensions.h */,
+				6418A87818D8F7C600B3F39E /* CJSONDeserializer_BlocksExtensions.m */,
+				6418A87918D8F7C600B3F39E /* CJSONSerialization.h */,
+				6418A87A18D8F7C600B3F39E /* CJSONSerialization.m */,
+				6418A87B18D8F7C600B3F39E /* CJSONSerializedData.h */,
+				6418A87C18D8F7C600B3F39E /* CJSONSerializedData.m */,
+			);
+			path = Experimental;
+			sourceTree = "<group>";
+		};
+		6418A87D18D8F7C600B3F39E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6418A87E18D8F7C600B3F39E /* CDataScanner_Extensions.h */,
+				6418A87F18D8F7C600B3F39E /* CDataScanner_Extensions.m */,
+				6418A88018D8F7C600B3F39E /* NSDictionary_JSONExtensions.h */,
+				6418A88118D8F7C600B3F39E /* NSDictionary_JSONExtensions.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6418A88218D8F7C600B3F39E /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				6418A88318D8F7C600B3F39E /* CJSONDeserializer.h */,
+				6418A88418D8F7C600B3F39E /* CJSONDeserializer.m */,
+				6418A88518D8F7C600B3F39E /* CJSONScanner.h */,
+				6418A88618D8F7C600B3F39E /* CJSONScanner.m */,
+				6418A88718D8F7C600B3F39E /* CJSONSerializer.h */,
+				6418A88818D8F7C600B3F39E /* CJSONSerializer.m */,
+				6418A88918D8F7C600B3F39E /* JSONRepresentation.h */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		9222E2B918734FF800A246C7 /* libs */ = {
@@ -147,6 +287,7 @@
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6418A87018D8F7C600B3F39E /* WTMGlyph */,
 				6415C5B918D771F3002B0435 /* Sprites */,
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
@@ -322,7 +463,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
+				6418A8B818D9132C00B3F39E /* squarre.json in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
+				6418A8A018D8F7C700B3F39E /* D.json in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
@@ -330,9 +473,13 @@
 				B737893B180761570076A88C /* Published-iOS in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
+				6418A8AE18D8F7C700B3F39E /* T.json in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
+				6418A8AD18D8F7C700B3F39E /* protractor-chi2010.pdf in Resources */,
+				6418A8AA18D8F7C700B3F39E /* N.json in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
+				6418A8AC18D8F7C700B3F39E /* P.json in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
 				B71F5911188484E7003F4D28 /* iPad-old.png in Resources */,
@@ -362,13 +509,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6418A8A818D8F7C700B3F39E /* CJSONScanner.m in Sources */,
+				6418A8B018D8F7C700B3F39E /* WTMGlyph.m in Sources */,
+				6418A8A518D8F7C700B3F39E /* CDataScanner_Extensions.m in Sources */,
+				6418A89F18D8F7C700B3F39E /* CDataScanner.m in Sources */,
+				6418A8A918D8F7C700B3F39E /* CJSONSerializer.m in Sources */,
+				6418A8B418D8F7C700B3F39E /* WTMGlyphTemplate.m in Sources */,
 				6415C5BD18D77218002B0435 /* Player.m in Sources */,
+				6418A8AF18D8F7C700B3F39E /* WTMDetectionResult.m in Sources */,
+				6418A8B518D8F7C700B3F39E /* WTMGlyphUtilities.m in Sources */,
+				6418A8B218D8F7C700B3F39E /* WTMGlyphDetector.m in Sources */,
+				6418A8B118D8F7C700B3F39E /* WTMGlyphDefaults.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				6415C5C318D779A0002B0435 /* Game.m in Sources */,
+				6418A8A118D8F7C700B3F39E /* CFilteringJSONSerializer.m in Sources */,
+				6418A8A618D8F7C700B3F39E /* NSDictionary_JSONExtensions.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
+				6418A8A318D8F7C700B3F39E /* CJSONSerialization.m in Sources */,
+				6418A8AB18D8F7C700B3F39E /* ndollar.js in Sources */,
+				6418A8A718D8F7C700B3F39E /* CJSONDeserializer.m in Sources */,
 				64B598D818D8B4FC00AE6472 /* Ball.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
+				6418A8A218D8F7C700B3F39E /* CJSONDeserializer_BlocksExtensions.m in Sources */,
+				6418A8B318D8F7C700B3F39E /* WTMGlyphStroke.m in Sources */,
 				069A548C18D0C5EA008F36AE /* Crawling.m in Sources */,
+				6418A8A418D8F7C700B3F39E /* CJSONSerializedData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +619,7 @@
 				PRODUCT_NAME = NaziBabySlaughter;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "\"WTMGlyph\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -487,6 +653,7 @@
 				PRODUCT_NAME = NaziBabySlaughter;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "\"WTMGlyph\"";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

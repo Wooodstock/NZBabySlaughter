@@ -14,6 +14,8 @@
     CCNode *_player;
     CCNode *_contentNode;
     CCNode *_playerZone;
+    
+    WTMGlyphDetector *glyphDetector;
 }
 
 
@@ -23,6 +25,43 @@
     self.userInteractionEnabled = TRUE;
     [_player setVisible:true];
     [self schedule:@selector(addBaby:) interval:1.5];
+    
+    //Gesture
+    // Initialize
+    glyphDetector = [WTMGlyphDetector detector];
+    
+    // Assign the detection delegate
+    glyphDetector.delegate = self;
+    
+    //
+    glyphDetector.timeoutSeconds = 3;
+    
+    // Add initial glyph templates from JSON files
+    // Rinse and repeat for each of the gestures you want to detec
+    
+    NSData *jsonData1 = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"P" ofType:@"json"]];
+    [glyphDetector addGlyphFromJSON:jsonData1 name:@"P"];
+    
+    NSData *jsonData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"squarre" ofType:@"json"]];
+    [glyphDetector addGlyphFromJSON:jsonData name:@"squarre"];
+    
+    NSData *jsonData2 = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"D" ofType:@"json"]];
+    [glyphDetector addGlyphFromJSON:jsonData2 name:@"D"];
+    
+    NSData *jsonData3 = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"T" ofType:@"json"]];
+    [glyphDetector addGlyphFromJSON:jsonData3 name:@"T"];
+}
+
+#pragma mark - WTMGlyphDelegate
+
+- (void)glyphDetected:(WTMGlyph *)glyph withScore:(float)score {
+    NSString *statusString = @"";
+    statusString = [statusString stringByAppendingFormat:@"Last gesture detected: %@\nScore: %.3f", glyph.name, score];
+    NSLog(@"%@", statusString);
+}
+
+- (void)glyphResults:(NSArray *)results{
+    NSLog(@"WTF glglkgfdoihglsdfjhgldsfighsofdibv");
 }
 
 #pragma mark - Touch Handling
@@ -34,20 +73,34 @@
     
     NSLog(@"Content size height of playerZone y : %f", _playerZone.contentSize.height );
     
+    //Handle Gesture
+    BOOL hasTimeOut = [glyphDetector hasTimedOut];
+    if (hasTimeOut) {
+        NSLog(@"Gesture detector reset");
+        [glyphDetector reset];
+    }
+
+    CGPoint contenttouchLocation = [touch locationInNode:_contentNode];
+    [glyphDetector addPoint:contenttouchLocation];
     
     CGPoint touchLocation = [touch locationInNode:_playerZone];
-    
-    NSLog(@"Touch Location y : %f", touchLocation.y);
 
+    
+
+    NSLog(@"Touch Location y : %f", touchLocation.y);
+    
+    //Handle player ;oves
     // Zone du deplacement du joueur
     if(touchLocation.y < _playerZone.contentSize.height && touchLocation.x < _playerZone.contentSize.width && touchLocation.x > _playerZone.anchorPointInPoints.x)
     {
         [_player setPosition:ccp(touchLocation.x, _player.position.y)];
     }
     
+    //Handle gun
     // Zone du baby
     if(touchLocation.y > _playerZone.contentSize.height && touchLocation.x < _playerZone.contentSize.width && touchLocation.x > _playerZone.anchorPointInPoints.x)
     {
+        
         // 4
         Ball *ball = (Ball*)[CCBReader load:@"Ball"];
         ball.position = CGPointMake(_player.position.x + _player.contentSize.width, _player.position.y + _player.contentSize.height);
@@ -65,8 +118,13 @@
 
 - (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
+    //Handle Gesture
+    CGPoint contenttouchLocation = [touch locationInNode:_contentNode];
+    [glyphDetector addPoint:contenttouchLocation];
+    
     // whenever touches move, update the position of the mouseJointNode to the touch position
     CGPoint touchLocation = [touch locationInNode:_playerZone];
+    
     if(touchLocation.y < _playerZone.contentSize.height && touchLocation.x < _playerZone.contentSize.width && touchLocation.x > _playerZone.anchorPointInPoints.x)
     {
         [_player setPosition:ccp(touchLocation.x, _player.position.y)];
@@ -75,7 +133,12 @@
 
 -(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    // when touches end
+    //Handle Gesture
+    CGPoint contenttouchLocation = [touch locationInNode:_contentNode];
+    [glyphDetector addPoint:contenttouchLocation];
+    [glyphDetector detectGlyph];
+    
+    NSLog(@"TOUCH END pour bertrand qui pourit les logs");
 }
 
 -(void) touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event

@@ -9,7 +9,8 @@
 // When you import this file, you import all the cocos2d classes
 #import "CCNode.h"
 #import "Player.h"
+#import "WTMGlyphDetector.h"
 
-@interface Game : CCNode
+@interface Game : CCNode <WTMGlyphDelegate>
 
 @end
