@@ -7,8 +7,8 @@
 //
 
 #import "Game.h"
-#import "Baby.h"
 #import "Ball.h"
+#import "Crawling.h"
 
 @implementation Game{
     CCNode *_player;
