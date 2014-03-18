@@ -8,6 +8,7 @@
 
 #import "Game.h"
 #import "Baby.h"
+#import "Ball.h"
 
 @implementation Game{
     CCNode *_player;
@@ -38,11 +39,27 @@
     
     NSLog(@"Touch Location y : %f", touchLocation.y);
 
-    
+    // Zone du deplacement du joueur
     if(touchLocation.y < _playerZone.contentSize.height && touchLocation.x < _playerZone.contentSize.width && touchLocation.x > _playerZone.anchorPointInPoints.x)
     {
         [_player setPosition:ccp(touchLocation.x, _player.position.y)];
     }
+    
+    // Zone du baby
+    if(touchLocation.y > _playerZone.contentSize.height && touchLocation.x < _playerZone.contentSize.width && touchLocation.x > _playerZone.anchorPointInPoints.x)
+    {
+        // 4
+        Ball *ball = (Ball*)[CCBReader load:@"Ball"];
+        ball.position = CGPointMake(_player.position.x + _player.contentSize.width, _player.position.y + _player.contentSize.height);
+        [self addChild:ball ];
+        
+        CGPoint targetPosition = CGPointMake(_player.position.x + _player.contentSize.width, self.contentSize.height + ball.contentSize.height/2);
+        
+        CCActionMoveTo *actionMove   = [CCActionMoveTo actionWithDuration:1.5f position:targetPosition];
+        CCActionRemove *actionRemove = [CCActionRemove action];
+        [ball runAction:[CCActionSequence actionWithArray:@[actionMove,actionRemove]]];
+    }
+    
     
 }
 
