@@ -86,7 +86,7 @@
 
 - (void)addBaby:(CCTime)dt {
     
-    Baby *baby = (Baby*)[CCBReader load:@"Baby"];
+    Crawling *baby = (Crawling*)[CCBReader load:@"Crawling"];
     
     // 1
     int minX = baby.contentSize.width / 2;
@@ -118,7 +118,7 @@
     int randomDuration = (arc4random() % rangeDuration) + minDuration;*/
     
     // 4
-    CCAction *actionMove = [CCActionMoveTo actionWithDuration:5.0 position:CGPointMake([[array objectAtIndex:rndValue] floatValue], -baby.contentSize.height/2)];
+    CCAction *actionMove = [CCActionMoveTo actionWithDuration:10.0 position:CGPointMake([[array objectAtIndex:rndValue] floatValue], -baby.contentSize.height/2)];
     CCAction *actionRemove = [CCActionRemove action];
     [baby runAction:[CCActionSequence actionWithArray:@[actionMove,actionRemove]]];
 }
