@@ -60,8 +60,6 @@
 - (CCScene*) startScene
 {
     return [CCBReader loadAsScene:@"MainScene"];
-    
-    //[CCBReader load:@"Player"]; chargement ccb file
 }
 
 @end

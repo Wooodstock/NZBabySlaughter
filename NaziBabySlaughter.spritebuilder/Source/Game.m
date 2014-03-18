@@ -8,15 +8,46 @@
 
 #import "Game.h"
 
+@implementation Game{
+  
+    CCNode *_player;
+    CCNode *_contentNode;
+    
+}
 
-@implementation Game
 
 // is called when CCB file has completed loading
 - (void)didLoadFromCCB {
+    
+    self.userInteractionEnabled = TRUE;
+    
 }
 
-// called on every touch in this scene
-- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+#pragma mark - Touch Handling
+
+-(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    
+    CGPoint touchLocation = [touch locationInNode:_contentNode];
+     _player.position = touchLocation;
+    }
+
+- (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    // whenever touches move, update the position of the mouseJointNode to the touch position
+    CGPoint touchLocation = [touch locationInNode:_contentNode];
+    _player.position = touchLocation;
 }
+
+-(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    // when touches end
+}
+
+-(void) touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    // when touches are cancelled
+}
+
 
 @end
