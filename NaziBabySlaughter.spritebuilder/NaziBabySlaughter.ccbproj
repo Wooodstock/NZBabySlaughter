@@ -94,10 +94,6 @@
 		<dict>
 			<key>isSmartSpriteSheet</key>
 			<true/>
-		<key>Sprites/bullet.png</key>
-		<dict>
-			<key>scaleFrom</key>
-			<integer>1</integer>
 		</dict>
 		<key>background.png</key>
 		<dict/>
