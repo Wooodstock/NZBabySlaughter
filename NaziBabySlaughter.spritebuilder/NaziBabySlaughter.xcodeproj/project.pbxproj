@@ -12,7 +12,8 @@
 		06E486E218D156C100D911BE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E486E118D156C100D911BE /* CoreMotion.framework */; };
 		6415C5BD18D77218002B0435 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415C5BC18D77218002B0435 /* Player.m */; };
 		6415C5C318D779A0002B0435 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415C5C218D779A0002B0435 /* Game.m */; };
-		64B598D818D8B4FC00AE6472 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B598D718D8B4FC00AE6472 /* Ball.m */; };
+		64B598D818D8B4FC00AE6472 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B598D718D8B4FC00AE6472 /* Bullet.m */; };
+		64D4331818DA0E190065D49D /* MegaGun.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D4331718DA0E190065D49D /* MegaGun.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -69,8 +70,10 @@
 		6415C5BC18D77218002B0435 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Source/Player.m; sourceTree = "<group>"; };
 		6415C5C118D779A0002B0435 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = Source/Game.h; sourceTree = "<group>"; };
 		6415C5C218D779A0002B0435 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Game.m; path = Source/Game.m; sourceTree = "<group>"; };
-		64B598D618D8B4FC00AE6472 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ball.h; path = Source/Ball.h; sourceTree = "<group>"; };
-		64B598D718D8B4FC00AE6472 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ball.m; path = Source/Ball.m; sourceTree = "<group>"; };
+		64B598D618D8B4FC00AE6472 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bullet.h; path = Source/Bullet.h; sourceTree = "<group>"; };
+		64B598D718D8B4FC00AE6472 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bullet.m; path = Source/Bullet.m; sourceTree = "<group>"; };
+		64D4331618DA0E190065D49D /* MegaGun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MegaGun.h; path = Source/MegaGun.h; sourceTree = "<group>"; };
+		64D4331718DA0E190065D49D /* MegaGun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MegaGun.m; path = Source/MegaGun.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -133,10 +136,12 @@
 			children = (
 				6415C5BB18D77218002B0435 /* Player.h */,
 				6415C5BC18D77218002B0435 /* Player.m */,
-				64B598D618D8B4FC00AE6472 /* Ball.h */,
-				64B598D718D8B4FC00AE6472 /* Ball.m */,
+				64B598D618D8B4FC00AE6472 /* Bullet.h */,
+				64B598D718D8B4FC00AE6472 /* Bullet.m */,
 				06E486D818D11F5200D911BE /* PoweredGun.h */,
 				06E486D918D11F5200D911BE /* PoweredGun.m */,
+				64D4331618DA0E190065D49D /* MegaGun.h */,
+				64D4331718DA0E190065D49D /* MegaGun.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -372,9 +377,10 @@
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				6415C5C318D779A0002B0435 /* Game.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
-				64B598D818D8B4FC00AE6472 /* Ball.m in Sources */,
+				64B598D818D8B4FC00AE6472 /* Bullet.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				069A548C18D0C5EA008F36AE /* Crawling.m in Sources */,
+				64D4331818DA0E190065D49D /* MegaGun.m in Sources */,
 				06E486DA18D11F5200D911BE /* PoweredGun.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,7 +29,7 @@
 	<key>javascriptMainCCB</key>
 	<string>MainScene</string>
 	<key>needRepublish</key>
-	<true/>
+	<false/>
 	<key>onlyPublishCCBs</key>
 	<false/>
 	<key>publishAudioQuality_android</key>
@@ -90,6 +90,11 @@
 		</dict>
 		<key>Sprites</key>
 		<dict/>
+		<key>Sprites/bullet.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
 		<key>background.png</key>
 		<dict/>
 		<key>ccbResources</key>
@@ -176,8 +181,6 @@
 		</dict>
 		<key>crawling</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>isSmartSpriteSheet</key>
 			<true/>
 		</dict>

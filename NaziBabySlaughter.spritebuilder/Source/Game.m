@@ -7,9 +7,10 @@
 //
 
 #import "Game.h"
-#import "Ball.h"
+#import "Bullet.h"
 #import "Crawling.h"
-#import "poweredGun.h"
+#import "PoweredGun.h"
+#import "MegaGun.h"
 #import <CoreMotion/CoreMotion.h>
 
 @implementation Game{
@@ -61,16 +62,16 @@
     CCLOG(@"TAP");
     // if zone du baby
     //if(_lastTouchLocation.y > _playerZone.contentSize.height && _lastTouchLocation.x < _playerZone.contentSize.width && _lastTouchLocation.x > _playerZone.anchorPointInPoints.x)
-    PoweredGun *ball = (PoweredGun*)[CCBReader load:@"poweredGun"];
-    ball.position = CGPointMake(_player.position.x + _player.contentSize.width, _player.position.y + _player.contentSize.height);
-    ball.physicsBody.collisionType  = @"ballCollision";
-    [_physicsWorld addChild:ball ];
+    Bullet *bullet = (Bullet*)[CCBReader load:@"bullet"];
+    bullet.position = CGPointMake(_player.position.x + _player.contentSize.width, _player.position.y + _player.contentSize.height);
+    bullet.physicsBody.collisionType  = @"ballCollision";
+    [_physicsWorld addChild:bullet];
     
-    CGPoint targetPosition = CGPointMake(_player.position.x + _player.contentSize.width, self.contentSize.height + ball.contentSize.height/2);
+    CGPoint targetPosition = CGPointMake(_player.position.x + _player.contentSize.width, self.contentSize.height + bullet.contentSize.height/2);
     
     CCActionMoveTo *actionMove   = [CCActionMoveTo actionWithDuration:1.5f position:targetPosition];
     CCActionRemove *actionRemove = [CCActionRemove action];
-    [ball runAction:[CCActionSequence actionWithArray:@[actionMove,actionRemove]]];
+    [bullet runAction:[CCActionSequence actionWithArray:@[actionMove,actionRemove]]];
 }
 
 -(void)handleSwipeFrom:(UISwipeGestureRecognizer*)recognizer
@@ -78,10 +79,30 @@
     if(recognizer.direction == UISwipeGestureRecognizerDirectionRight)
     {
         CCLOG(@"Right Swipe");
+        PoweredGun *poweredGun = (PoweredGun*)[CCBReader load:@"poweredGun"];
+        poweredGun.position = CGPointMake(_player.position.x + _player.contentSize.width, _player.position.y + _player.contentSize.height);
+        poweredGun.physicsBody.collisionType  = @"ballCollision";
+        [_physicsWorld addChild:poweredGun];
+        
+        CGPoint targetPosition = CGPointMake(_player.position.x + _player.contentSize.width, self.contentSize.height + poweredGun.contentSize.height/2);
+        
+        CCActionMoveTo *actionMove   = [CCActionMoveTo actionWithDuration:1.5f position:targetPosition];
+        CCActionRemove *actionRemove = [CCActionRemove action];
+        [poweredGun runAction:[CCActionSequence actionWithArray:@[actionMove,actionRemove]]];
     }
     else if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft)
     {
         CCLOG(@"Left Swipe");
+        MegaGun *megaGun = (MegaGun*)[CCBReader load:@"megaGun"];
+        megaGun.position = CGPointMake(_player.position.x + _player.contentSize.width, _player.position.y + _player.contentSize.height);
+        megaGun.physicsBody.collisionType  = @"ballCollision";
+        [_physicsWorld addChild:megaGun];
+        
+        CGPoint targetPosition = CGPointMake(_player.position.x + _player.contentSize.width, self.contentSize.height + megaGun.contentSize.height/2);
+        
+        CCActionMoveTo *actionMove   = [CCActionMoveTo actionWithDuration:1.5f position:targetPosition];
+        CCActionRemove *actionRemove = [CCActionRemove action];
+        [megaGun runAction:[CCActionSequence actionWithArray:@[actionMove,actionRemove]]];
     }
     else if (recognizer.direction == UISwipeGestureRecognizerDirectionUp)
     {

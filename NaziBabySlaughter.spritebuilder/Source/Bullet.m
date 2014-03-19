@@ -1,20 +1,20 @@
 //
-//  PoweredGun.m
+//  Ball.m
 //  NaziBabySlaughter
 //
-//  Created by Bertrand on 3/13/14.
+//  Created by Thibault Palier on 18/03/14.
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "PoweredGun.h"
+#import "Bullet.h"
 
-@implementation PoweredGun
+@implementation Bullet
 
 - (id)init {
     self = [super init];
     
     if (self) {
-        CCLOG(@"PoweredGun created");
+        CCLOG(@"Ball created");
     }
     
     return self;
