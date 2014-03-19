@@ -8,6 +8,6 @@
 
 #import "CCSprite.h"
 
-@interface Ball : CCSprite
+@interface Bullet : CCSprite
 
 @end

@@ -1,20 +1,20 @@
 //
-//  Ball.m
+//  MegaGun.m
 //  NaziBabySlaughter
 //
-//  Created by Thibault Palier on 18/03/14.
+//  Created by Thibault Palier on 19/03/14.
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "Ball.h"
+#import "MegaGun.h"
 
-@implementation Ball
+@implementation MegaGun
 
 - (id)init {
     self = [super init];
     
     if (self) {
-        CCLOG(@"Ball created");
+        CCLOG(@"MegaGun created");
     }
     
     return self;
