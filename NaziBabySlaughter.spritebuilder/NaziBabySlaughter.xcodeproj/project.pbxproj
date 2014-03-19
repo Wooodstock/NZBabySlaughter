@@ -34,6 +34,7 @@
 		6418A8B418D8F7C700B3F39E /* WTMGlyphTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A89C18D8F7C700B3F39E /* WTMGlyphTemplate.m */; };
 		6418A8B518D8F7C700B3F39E /* WTMGlyphUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A89E18D8F7C700B3F39E /* WTMGlyphUtilities.m */; };
 		6418A8B818D9132C00B3F39E /* squarre.json in Resources */ = {isa = PBXBuildFile; fileRef = 6418A8B718D9132C00B3F39E /* squarre.json */; };
+		6418A8C018D9178300B3F39E /* WTMGlyphDetectorNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418A8BF18D9178300B3F39E /* WTMGlyphDetectorNode.m */; };
 		64B598D818D8B4FC00AE6472 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B598D718D8B4FC00AE6472 /* Ball.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -132,6 +133,8 @@
 		6418A89D18D8F7C700B3F39E /* WTMGlyphUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphUtilities.h; sourceTree = "<group>"; };
 		6418A89E18D8F7C700B3F39E /* WTMGlyphUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTMGlyphUtilities.m; sourceTree = "<group>"; };
 		6418A8B718D9132C00B3F39E /* squarre.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = squarre.json; sourceTree = "<group>"; };
+		6418A8BE18D9178300B3F39E /* WTMGlyphDetectorNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTMGlyphDetectorNode.h; path = Source/WTMGlyphDetectorNode.h; sourceTree = "<group>"; };
+		6418A8BF18D9178300B3F39E /* WTMGlyphDetectorNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTMGlyphDetectorNode.m; path = Source/WTMGlyphDetectorNode.m; sourceTree = "<group>"; };
 		64B598D618D8B4FC00AE6472 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ball.h; path = Source/Ball.h; sourceTree = "<group>"; };
 		64B598D718D8B4FC00AE6472 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ball.m; path = Source/Ball.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
@@ -331,6 +334,8 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
+				6418A8BE18D9178300B3F39E /* WTMGlyphDetectorNode.h */,
+				6418A8BF18D9178300B3F39E /* WTMGlyphDetectorNode.m */,
 				B737893C1807616C0076A88C /* Source */,
 				B77F1B4617B978D7009739AE /* Resources */,
 				9222E2B918734FF800A246C7 /* libs */,
@@ -526,6 +531,7 @@
 				6418A8A618D8F7C700B3F39E /* NSDictionary_JSONExtensions.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				6418A8A318D8F7C700B3F39E /* CJSONSerialization.m in Sources */,
+				6418A8C018D9178300B3F39E /* WTMGlyphDetectorNode.m in Sources */,
 				6418A8AB18D8F7C700B3F39E /* ndollar.js in Sources */,
 				6418A8A718D8F7C700B3F39E /* CJSONDeserializer.m in Sources */,
 				64B598D818D8B4FC00AE6472 /* Ball.m in Sources */,

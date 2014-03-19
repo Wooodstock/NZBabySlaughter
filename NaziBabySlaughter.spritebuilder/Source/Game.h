@@ -10,7 +10,10 @@
 #import "CCNode.h"
 #import "Player.h"
 #import "WTMGlyphDetector.h"
+#import "WTMGlyphDetectorNode.h"
 
-@interface Game : CCNode <WTMGlyphDelegate>
+@interface Game : CCNode <WTMGlyphDetectorNodeDelegate>
+
+@property (nonatomic, strong) WTMGlyphDetectorNode *gestureDetectorNode;
 
 @end

@@ -14,8 +14,7 @@
     CCNode *_player;
     CCNode *_contentNode;
     CCNode *_playerZone;
-    
-    WTMGlyphDetector *glyphDetector;
+    WTMGlyphDetectorNode *_GlyphDetectorNode;
 }
 
 
@@ -27,43 +26,29 @@
     [self schedule:@selector(addBaby:) interval:1.5];
     
     //Gesture
-    // Initialize
-    glyphDetector = [WTMGlyphDetector detector];
-    
-    // Assign the detection delegate
-    glyphDetector.delegate = self;
-    
-    //
-    glyphDetector.timeoutSeconds = 3;
-    
-    // Add initial glyph templates from JSON files
-    // Rinse and repeat for each of the gestures you want to detec
-    
-    NSData *jsonData1 = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"P" ofType:@"json"]];
-    [glyphDetector addGlyphFromJSON:jsonData1 name:@"P"];
-    
-    NSData *jsonData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"squarre" ofType:@"json"]];
-    [glyphDetector addGlyphFromJSON:jsonData name:@"squarre"];
-    
-    NSData *jsonData2 = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"D" ofType:@"json"]];
-    [glyphDetector addGlyphFromJSON:jsonData2 name:@"D"];
-    
-    NSData *jsonData3 = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"T" ofType:@"json"]];
-    [glyphDetector addGlyphFromJSON:jsonData3 name:@"T"];
+    _GlyphDetectorNode.delegate = self;
+    [_GlyphDetectorNode loadTemplatesWithNames:@"D", @"N", @"P", @"T", @"squarre", nil];
 }
 
-#pragma mark - WTMGlyphDelegate
+#pragma mark - Delegate
 
-- (void)glyphDetected:(WTMGlyph *)glyph withScore:(float)score {
+- (void)wtmGlyphDetectorView:(WTMGlyphDetectorNode*)theView glyphDetected:(WTMGlyph *)glyph withScore:(float)score
+{
+    //Reject detection when quality too low
+    //More info: http://britg.com/2011/07/17/complex-gesture-recognition-understanding-the-score/
+    if (score < 0.7f)
+        return;
+    
     NSString *statusString = @"";
+    
+    NSString *glyphNames = [_GlyphDetectorNode getGlyphNamesString];
+    if ([glyphNames length] > 0)
+        statusString = [statusString stringByAppendingFormat:@"Loaded with %@ templates.\n\n", glyphNames];
+    
     statusString = [statusString stringByAppendingFormat:@"Last gesture detected: %@\nScore: %.3f", glyph.name, score];
+    
     NSLog(@"%@", statusString);
 }
-
-- (void)glyphResults:(NSArray *)results{
-    NSLog(@"WTF glglkgfdoihglsdfjhgldsfighsofdibv");
-}
-
 #pragma mark - Touch Handling
 
 -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
@@ -73,15 +58,6 @@
     
     NSLog(@"Content size height of playerZone y : %f", _playerZone.contentSize.height );
     
-    //Handle Gesture
-    BOOL hasTimeOut = [glyphDetector hasTimedOut];
-    if (hasTimeOut) {
-        NSLog(@"Gesture detector reset");
-        [glyphDetector reset];
-    }
-
-    CGPoint contenttouchLocation = [touch locationInNode:_contentNode];
-    [glyphDetector addPoint:contenttouchLocation];
     
     CGPoint touchLocation = [touch locationInNode:_playerZone];
 
@@ -118,9 +94,6 @@
 
 - (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    //Handle Gesture
-    CGPoint contenttouchLocation = [touch locationInNode:_contentNode];
-    [glyphDetector addPoint:contenttouchLocation];
     
     // whenever touches move, update the position of the mouseJointNode to the touch position
     CGPoint touchLocation = [touch locationInNode:_playerZone];
@@ -133,10 +106,6 @@
 
 -(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    //Handle Gesture
-    CGPoint contenttouchLocation = [touch locationInNode:_contentNode];
-    [glyphDetector addPoint:contenttouchLocation];
-    [glyphDetector detectGlyph];
     
     NSLog(@"TOUCH END pour bertrand qui pourit les logs");
 }
