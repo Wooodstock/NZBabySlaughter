@@ -1,5 +1,5 @@
 //
-//  Crawling.h
+//  GeneralBaby.h
 //  NaziBabySlaughter
 //
 //  Created by Thibault Palier on 19/03/14.
@@ -8,6 +8,6 @@
 
 #import "CCSprite.h"
 
-@interface Crawling : CCSprite
+@interface GeneralBaby : CCSprite
 
 @end

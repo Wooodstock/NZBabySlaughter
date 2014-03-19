@@ -1,20 +1,20 @@
 //
-//  Crawling.m
+//  GeneralBaby.m
 //  NaziBabySlaughter
 //
 //  Created by Thibault Palier on 19/03/14.
 //  Copyright (c) 2014 Apportable. All rights reserved.
 //
 
-#import "Crawling.h"
+#import "GeneralBaby.h"
 
-@implementation Crawling
+@implementation GeneralBaby
 
 - (id)init {
     self = [super init];
     
     if (self) {
-        CCLOG(@"Crawling created");
+        CCLOG(@"GeneralBaby created");
     }
     
     return self;
