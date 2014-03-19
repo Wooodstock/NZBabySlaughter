@@ -180,6 +180,9 @@
 }
 
 - (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair babyCollision:(CCNode *)baby wallCollision:(CCNode *)wall {
+    if([wall isKindOfClass:@"Wall"]){
+        CCLOG(@"Je suis un wall hahahah");
+    }
     Wall *currentWall = (Wall*) wall;
     [currentWall destroy];
     [baby removeFromParent];
