@@ -50,7 +50,7 @@
     
     _physicsWorld = [CCPhysicsNode node];
     _physicsWorld.gravity = ccp(0,0);
-    _physicsWorld.debugDraw = YES;
+    //_physicsWorld.debugDraw = YES;
     _physicsWorld.collisionDelegate = self;
     
     [self addChild:_physicsWorld];
@@ -127,7 +127,7 @@
                  @"yesExplode.wav",
                  nil];
     
-     [self schedule:@selector(playSoundTaunt:) interval:8];
+     [self schedule:@selector(playSoundTaunt:) interval:20];
 }
 
 -(void)playSoundDie{
