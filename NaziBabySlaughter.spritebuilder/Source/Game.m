@@ -31,9 +31,13 @@
     CMMotionManager *_motionManager;
     CGPoint _lastTouchLocation;
     double interval;
+
     NSMutableArray *_columnArray;
     int _score;
     CCLabelTTF *_lifeLabel, *_scoreLabel;
+
+    OALSimpleAudio *audio;
+
 }
 
 
@@ -89,6 +93,14 @@
     
     UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
     [[[CCDirector sharedDirector] view] addGestureRecognizer:tapRecognizer];
+    
+    //Sound
+    //[OALSimpleAudio sharedInstance];
+    audio = [OALSimpleAudio sharedInstance];
+    [audio playBg:@"bgSound.mp3" loop:YES];
+    [audio preloadEffect:@"ricochet.wav"];
+    [audio preloadEffect:@"sand.wav"];
+    [audio preloadEffect:@"die.wav"];
 }
 
 #pragma mark - Gesture Handling
@@ -223,6 +235,7 @@
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
             [baby removeFromParent];
+            [audio playEffect:@"die.wav"];
         }
         [ball removeFromParent];
         NSLog(@"crawling going");
@@ -234,6 +247,7 @@
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
             [baby removeFromParent];
+            [audio playEffect:@"die.wav"];
         }
         else if([ball isKindOfClass:[Bullet class]]){
             [baby removeFromParent];
@@ -263,6 +277,7 @@
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
             [baby removeFromParent];
+            [audio playEffect:@"die.wav"];
         }
         else if([ball isKindOfClass:[Bullet class]]){
             SergentHit *sergentHit = (SergentHit*)[CCBReader load:@"SergentHit"];
@@ -294,6 +309,7 @@
     Wall *currentWall = (Wall*) wall;
     [currentWall destroy];
     [baby removeFromParent];
+    [audio playEffect:@"sand.wav"];
     return YES;
 }
 
