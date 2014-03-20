@@ -25,6 +25,7 @@
     CMMotionManager *_motionManager;
     CGPoint _lastTouchLocation;
     double interval;
+    OALSimpleAudio *audio;
 }
 
 
@@ -80,6 +81,14 @@
     
     UITapGestureRecognizer* tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapFrom:)];
     [[[CCDirector sharedDirector] view] addGestureRecognizer:tapRecognizer];
+    
+    //Sound
+    //[OALSimpleAudio sharedInstance];
+    audio = [OALSimpleAudio sharedInstance];
+    [audio playBg:@"bgSound.mp3" loop:YES];
+    [audio preloadEffect:@"ricochet.wav"];
+    [audio preloadEffect:@"sand.wav"];
+    [audio preloadEffect:@"die.wav"];
 }
 
 #pragma mark - Gesture Handling
@@ -192,6 +201,7 @@
         
         if([ball isKindOfClass:[Bullet class]]){
             [baby removeFromParent];
+            [audio playEffect:@"die.wav"];
         }
         [ball removeFromParent];
         NSLog(@"crawling going");
@@ -199,6 +209,7 @@
     if([baby isKindOfClass:[GeneralBaby class]]){
         if([ball isKindOfClass:[PoweredGun class]]){
             [baby removeFromParent];
+            [audio playEffect:@"die.wav"];
         }
         [ball removeFromParent];
         NSLog(@"general going");
@@ -206,6 +217,7 @@
     if([baby isKindOfClass:[SergentBaby class]]){
         if([ball isKindOfClass:[MegaGun class]]){
             [baby removeFromParent];
+            [audio playEffect:@"die.wav"];
         }
         [ball removeFromParent];
         NSLog(@"caporal going");
@@ -219,6 +231,7 @@
     Wall *currentWall = (Wall*) wall;
     [currentWall destroy];
     [baby removeFromParent];
+    [audio playEffect:@"sand.wav"];
     return YES;
 }
 
