@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>Megagun/1.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 1}, {50, 126}}</string>
+			<key>offset</key>
+			<string>{0, 0}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{0, 0}, {50, 126}}</string>
+			<key>sourceSize</key>
+			<string>{50, 126}</string>
+		</dict>
+		<key>Megagun/2.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{1, 129}, {38, 122}}</string>
+			<key>offset</key>
+			<string>{0, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{6, 0}, {38, 122}}</string>
+			<key>sourceSize</key>
+			<string>{50, 126}</string>
+		</dict>
+		<key>Megagun/3.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{99, 1}, {38, 119}}</string>
+			<key>offset</key>
+			<string>{0, 3}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{6, 0}, {38, 119}}</string>
+			<key>sourceSize</key>
+			<string>{50, 126}</string>
+		</dict>
+		<key>Megagun/4.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{41, 129}, {45, 121}}</string>
+			<key>offset</key>
+			<string>{0, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{2, 0}, {45, 121}}</string>
+			<key>sourceSize</key>
+			<string>{50, 126}</string>
+		</dict>
+		<key>Megagun/5.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{88, 124}, {37, 121}}</string>
+			<key>offset</key>
+			<string>{0, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{6, 0}, {37, 121}}</string>
+			<key>sourceSize</key>
+			<string>{50, 126}</string>
+		</dict>
+		<key>Megagun/6.png</key>
+		<dict>
+			<key>frame</key>
+			<string>{{53, 1}, {44, 121}}</string>
+			<key>offset</key>
+			<string>{-1, 2}</string>
+			<key>rotated</key>
+			<false/>
+			<key>sourceColorRect</key>
+			<string>{{2, 0}, {44, 121}}</string>
+			<key>sourceSize</key>
+			<string>{50, 126}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>2</integer>
+		<key>size</key>
+		<string>{256, 256}</string>
+		<key>textureFileName</key>
+		<string>Megagun.png</string>
+	</dict>
+</dict>
+</plist>

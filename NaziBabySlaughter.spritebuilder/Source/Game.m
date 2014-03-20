@@ -14,6 +14,7 @@
 #import "SergentHit.h"
 #import "GeneralHit.h"
 #import "poweredGun.h"
+#import "GameOver.h"
 #import "Wall.h"
 #import "PoweredGun.h"
 #import "MegaGun.h"
@@ -31,15 +32,12 @@
     CMMotionManager *_motionManager;
     CGPoint _lastTouchLocation;
     double interval;
-
     NSMutableArray *_columnArray;
     int _score;
-    CCLabelTTF *_lifeLabel, *_scoreLabel;
-
     OALSimpleAudio *audio;
-    
     NSArray * _dieSound;
     NSArray * _tauntSound;
+    CCLabelTTF *_scoreLabel;
 
 }
 
@@ -52,7 +50,7 @@
     
     _physicsWorld = [CCPhysicsNode node];
     _physicsWorld.gravity = ccp(0,0);
-    //_physicsWorld.debugDraw = YES;
+    _physicsWorld.debugDraw = YES;
     _physicsWorld.collisionDelegate = self;
     
     [self addChild:_physicsWorld];
@@ -72,6 +70,12 @@
         
         [_physicsWorld addChild:wall];
     }
+    
+    GameOver *gameOver = (GameOver*)[CCBReader load:@"GameOver"];
+    gameOver.position = CGPointMake(_playerZone.anchorPoint.x, 0);
+    gameOver.physicsBody.collisionType  = @"gameOverCollision";
+    
+    [_physicsWorld addChild:gameOver];
     
     
     
@@ -354,6 +358,17 @@
     [audio playEffect:@"sand.wav"];
     return YES;
 }
+
+- (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair babyCollision:(CCNode *)baby gameOverCollision:(CCNode *)gameOverNode {
+    
+    NSLog(@"Game Over !");
+    
+    CCScene *mainMenuScene = [CCBReader loadAsScene:@"MainScene"];
+    [[CCDirector sharedDirector] replaceScene:mainMenuScene];
+    return YES;
+}
+
+
 
 - (void)touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {

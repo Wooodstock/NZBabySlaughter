@@ -88,6 +88,18 @@
 			<key>previewFolderHidden</key>
 			<true/>
 		</dict>
+		<key>Megagun</key>
+		<dict>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
+		<key>PoweredGun</key>
+		<dict>
+			<key>isDirty</key>
+			<true/>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
 		<key>Sprites</key>
 		<dict/>
 		<key>Sprites/player.png</key>
@@ -185,6 +197,11 @@
 			<integer>1</integer>
 		</dict>
 		<key>crawling</key>
+		<dict>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
+		<key>greenProj</key>
 		<dict>
 			<key>isSmartSpriteSheet</key>
 			<true/>
