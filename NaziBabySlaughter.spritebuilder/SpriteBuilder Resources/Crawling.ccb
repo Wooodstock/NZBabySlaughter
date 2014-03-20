@@ -48,24 +48,6 @@
 									<key>value</key>
 									<array>
 										<real>7</real>
-										<real>-3</real>
-									</array>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>position</string>
-									<key>time</key>
-									<real>1.5</real>
-									<key>type</key>
-									<integer>3</integer>
-									<key>value</key>
-									<array>
-										<real>7</real>
 										<real>-7</real>
 									</array>
 								</dict>
@@ -78,13 +60,31 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>3</real>
+									<real>0.5</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
 									<array>
 										<real>7</real>
 										<real>-3</real>
+									</array>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>position</string>
+									<key>time</key>
+									<real>1</real>
+									<key>type</key>
+									<integer>3</integer>
+									<key>value</key>
+									<array>
+										<real>7</real>
+										<real>-7</real>
 									</array>
 								</dict>
 							</array>
@@ -103,8 +103,6 @@
 				<string></string>
 				<key>displayName</key>
 				<string>left arm</string>
-				<key>locked</key>
-				<true/>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -132,7 +130,7 @@
 						<key>value</key>
 						<array>
 							<real>7</real>
-							<real>-6.9111108779907227</real>
+							<real>-6.4666666984558105</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -220,24 +218,6 @@
 									<key>value</key>
 									<array>
 										<real>-7</real>
-										<real>-7</real>
-									</array>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>position</string>
-									<key>time</key>
-									<real>1.5</real>
-									<key>type</key>
-									<integer>3</integer>
-									<key>value</key>
-									<array>
-										<real>-7</real>
 										<real>-3</real>
 									</array>
 								</dict>
@@ -250,13 +230,31 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>3</real>
+									<real>0.5</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
 									<array>
 										<real>-7</real>
 										<real>-7</real>
+									</array>
+								</dict>
+								<dict>
+									<key>easing</key>
+									<dict>
+										<key>type</key>
+										<integer>1</integer>
+									</dict>
+									<key>name</key>
+									<string>position</string>
+									<key>time</key>
+									<real>1</real>
+									<key>type</key>
+									<integer>3</integer>
+									<key>value</key>
+									<array>
+										<real>-7</real>
+										<real>-3</real>
 									</array>
 								</dict>
 							</array>
@@ -275,8 +273,6 @@
 				<string></string>
 				<key>displayName</key>
 				<string>right arm</string>
-				<key>locked</key>
-				<true/>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -304,7 +300,7 @@
 						<key>value</key>
 						<array>
 							<real>-7</real>
-							<real>-3.0888888835906982</real>
+							<real>-3.5333333015441895</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -404,12 +400,12 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>1.3999999761581421</real>
+									<real>0.5</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>-6.9444441795349121</real>
+										<real>-6.9000000953674316</real>
 										<real>11</real>
 									</array>
 								</dict>
@@ -422,7 +418,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>2.9666666984558105</real>
+									<real>1</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -437,31 +433,6 @@
 							<key>type</key>
 							<integer>3</integer>
 						</dict>
-						<key>rotation</key>
-						<dict>
-							<key>keyframes</key>
-							<array>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>1</integer>
-									</dict>
-									<key>name</key>
-									<string>rotation</string>
-									<key>time</key>
-									<real>2.9666666984558105</real>
-									<key>type</key>
-									<integer>2</integer>
-									<key>value</key>
-									<real>0.0</real>
-								</dict>
-							</array>
-							<key>name</key>
-							<string>rotation</string>
-							<key>type</key>
-							<integer>2</integer>
-						</dict>
 					</dict>
 				</dict>
 				<key>baseClass</key>
@@ -472,8 +443,6 @@
 				<string></string>
 				<key>displayName</key>
 				<string>left leg</string>
-				<key>locked</key>
-				<true/>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -500,8 +469,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>-6.9444441795349121</real>
-							<real>10.872340202331543</real>
+							<real>-6.9385185241699219</real>
+							<real>8.3999996185302734</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -530,16 +499,6 @@
 							<false/>
 							<integer>0</integer>
 						</array>
-					</dict>
-					<dict>
-						<key>baseValue</key>
-						<real>0.0</real>
-						<key>name</key>
-						<string>rotation</string>
-						<key>type</key>
-						<string>Degrees</string>
-						<key>value</key>
-						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -603,7 +562,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>1.5</real>
+									<real>0.5</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -621,7 +580,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>3</real>
+									<real>1</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -646,8 +605,6 @@
 				<string></string>
 				<key>displayName</key>
 				<string>right leg</string>
-				<key>locked</key>
-				<true/>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -675,7 +632,7 @@
 						<key>value</key>
 						<array>
 							<real>6.5</real>
-							<real>8.0666666030883789</real>
+							<real>10.600000381469727</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -740,8 +697,6 @@
 				<string></string>
 				<key>displayName</key>
 				<string>pampers</string>
-				<key>locked</key>
-				<true/>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -842,7 +797,7 @@
 									<key>type</key>
 									<integer>2</integer>
 									<key>value</key>
-									<real>0.0</real>
+									<real>-5</real>
 								</dict>
 								<dict>
 									<key>easing</key>
@@ -853,7 +808,7 @@
 									<key>name</key>
 									<string>rotation</string>
 									<key>time</key>
-									<real>1.5333333015441895</real>
+									<real>0.5</real>
 									<key>type</key>
 									<integer>2</integer>
 									<key>value</key>
@@ -868,11 +823,11 @@
 									<key>name</key>
 									<string>rotation</string>
 									<key>time</key>
-									<real>3</real>
+									<real>1</real>
 									<key>type</key>
 									<integer>2</integer>
 									<key>value</key>
-									<real>0.0</real>
+									<real>-5</real>
 								</dict>
 							</array>
 							<key>name</key>
@@ -890,8 +845,6 @@
 				<string></string>
 				<key>displayName</key>
 				<string>head</string>
-				<key>locked</key>
-				<true/>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -952,7 +905,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>9.5652179718017578</real>
+						<real>-3</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -979,6 +932,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -1100,8 +1055,6 @@
 				</array>
 			</dict>
 		</array>
-		<key>selected</key>
-		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -1137,17 +1090,17 @@
 			<key>chainedSequenceId</key>
 			<integer>0</integer>
 			<key>length</key>
-			<real>3</real>
+			<real>1</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1.4666666984558105</real>
+			<real>0.93333333730697632</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
-			<real>32</real>
+			<real>129.28932189941406</real>
 			<key>sequenceId</key>
 			<integer>0</integer>
 			<key>soundChannel</key>
