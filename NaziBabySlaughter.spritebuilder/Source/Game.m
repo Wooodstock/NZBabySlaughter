@@ -37,6 +37,9 @@
     CCLabelTTF *_lifeLabel, *_scoreLabel;
 
     OALSimpleAudio *audio;
+    
+    NSArray * _dieSound;
+    NSArray * _tauntSound;
 
 }
 
@@ -101,6 +104,40 @@
     [audio preloadEffect:@"ricochet.wav"];
     [audio preloadEffect:@"sand.wav"];
     [audio preloadEffect:@"die.wav"];
+    [audio preloadEffect:@"die2.wav"];
+    [audio preloadEffect:@"die3.wav"];
+    
+    [audio preloadEffect:@"childrenComming.wav"];
+    [audio preloadEffect:@"noMoreHead.wav"];
+    [audio preloadEffect:@"theprice.wav"];
+    [audio preloadEffect:@"yesExplode.wav"];
+    
+    _dieSound = [NSArray arrayWithObjects: @"die.wav",
+                             @"die2.wav",
+                             @"die3.wav",
+                             nil];
+    
+    _tauntSound = [NSArray arrayWithObjects: @"childrenComming.wav",
+                 @"noMoreHead.wav",
+                 @"theprice.wav",
+                 @"yesExplode.wav",
+                 nil];
+    
+     [self schedule:@selector(playSoundTaunt:) interval:8];
+}
+
+-(void)playSoundDie{
+    int lowerBound = 0;
+    int upperBound = 2;
+    int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
+    [audio playEffect:[_dieSound objectAtIndex:rndValue]];
+
+}
+-(void)playSoundTaunt:(CCTime)dt{
+    int lowerBound = 0;
+    int upperBound = 3;
+    int rndValue = lowerBound + arc4random() % (upperBound - lowerBound);
+    [audio playEffect:[_tauntSound objectAtIndex:rndValue]];
 }
 
 #pragma mark - Gesture Handling
@@ -214,6 +251,7 @@
         if([ball isKindOfClass:[Bullet class]]){
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
+            [self playSoundDie];
             [baby removeFromParent];
         }
         [ball removeFromParent];
@@ -224,6 +262,7 @@
         if([ball isKindOfClass:[PoweredGun class]]){
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
+            [self playSoundDie];
             [baby removeFromParent];
         }
         [ball removeFromParent];
@@ -235,7 +274,7 @@
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
             [baby removeFromParent];
-            [audio playEffect:@"die.wav"];
+            [self playSoundDie];
         }
         [ball removeFromParent];
         NSLog(@"crawling going");
@@ -247,10 +286,12 @@
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
             [baby removeFromParent];
-            [audio playEffect:@"die.wav"];
+            [self playSoundDie];
         }
         else if([ball isKindOfClass:[Bullet class]]){
             [baby removeFromParent];
+            [audio playEffect:@"ricochet.wav"];
+
             GeneralHit *generalHit = (GeneralHit*)[CCBReader load:@"GeneralHit"];
             
             // 2
@@ -277,7 +318,7 @@
             _score = _score + ZOMB_SCORE;
             _scoreLabel.string = [NSString stringWithFormat:@"Score: %d", _score*100];
             [baby removeFromParent];
-            [audio playEffect:@"die.wav"];
+            [self playSoundDie];
         }
         else if([ball isKindOfClass:[Bullet class]]){
             SergentHit *sergentHit = (SergentHit*)[CCBReader load:@"SergentHit"];
@@ -285,6 +326,7 @@
             // 2
             sergentHit.position = CGPointMake(baby.position.x, baby.position.y);
             sergentHit.physicsBody.collisionType  = @"babyCollision";
+            [audio playEffect:@"ricochet.wav"];
             [baby removeFromParent];
             [_physicsWorld addChild:sergentHit];
             

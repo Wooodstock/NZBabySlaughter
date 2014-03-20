@@ -15,6 +15,12 @@
 		06E486E818D16D0000D911BE /* Wall.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E486E718D16D0000D911BE /* Wall.m */; };
 		6415C5BD18D77218002B0435 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415C5BC18D77218002B0435 /* Player.m */; };
 		6415C5C318D779A0002B0435 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415C5C218D779A0002B0435 /* Game.m */; };
+		64265F9918DB8A4B005DADF0 /* die2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64265F9718DB8A4A005DADF0 /* die2.wav */; };
+		64265F9A18DB8A4B005DADF0 /* die3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64265F9818DB8A4B005DADF0 /* die3.wav */; };
+		64265FA018DB9314005DADF0 /* childrenComming.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64265F9C18DB9314005DADF0 /* childrenComming.wav */; };
+		64265FA118DB9314005DADF0 /* noMoreHead.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64265F9D18DB9314005DADF0 /* noMoreHead.wav */; };
+		64265FA218DB9314005DADF0 /* theprice.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64265F9E18DB9314005DADF0 /* theprice.wav */; };
+		64265FA318DB9314005DADF0 /* yesExplode.wav in Resources */ = {isa = PBXBuildFile; fileRef = 64265F9F18DB9314005DADF0 /* yesExplode.wav */; };
 		6427D05E18DA551200B17793 /* Crawling.m in Sources */ = {isa = PBXBuildFile; fileRef = 6427D05D18DA551200B17793 /* Crawling.m */; };
 		6427D06218DA553F00B17793 /* GeneralBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 6427D06118DA553F00B17793 /* GeneralBaby.m */; };
 		6427D06518DA556000B17793 /* CaporalBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 6427D06418DA556000B17793 /* CaporalBaby.m */; };
@@ -88,6 +94,12 @@
 		6415C5BC18D77218002B0435 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = Source/Player.m; sourceTree = "<group>"; };
 		6415C5C118D779A0002B0435 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = Source/Game.h; sourceTree = "<group>"; };
 		6415C5C218D779A0002B0435 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Game.m; path = Source/Game.m; sourceTree = "<group>"; };
+		64265F9718DB8A4A005DADF0 /* die2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = die2.wav; sourceTree = "<group>"; };
+		64265F9818DB8A4B005DADF0 /* die3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = die3.wav; sourceTree = "<group>"; };
+		64265F9C18DB9314005DADF0 /* childrenComming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = childrenComming.wav; sourceTree = "<group>"; };
+		64265F9D18DB9314005DADF0 /* noMoreHead.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = noMoreHead.wav; sourceTree = "<group>"; };
+		64265F9E18DB9314005DADF0 /* theprice.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = theprice.wav; sourceTree = "<group>"; };
+		64265F9F18DB9314005DADF0 /* yesExplode.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = yesExplode.wav; sourceTree = "<group>"; };
 		6427D05C18DA551200B17793 /* Crawling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Crawling.h; path = Source/Crawling.h; sourceTree = "<group>"; };
 		6427D05D18DA551200B17793 /* Crawling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Crawling.m; path = Source/Crawling.m; sourceTree = "<group>"; };
 		6427D06018DA553F00B17793 /* GeneralBaby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeneralBaby.h; path = Source/GeneralBaby.h; sourceTree = "<group>"; };
@@ -281,6 +293,12 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				64265F9C18DB9314005DADF0 /* childrenComming.wav */,
+				64265F9D18DB9314005DADF0 /* noMoreHead.wav */,
+				64265F9E18DB9314005DADF0 /* theprice.wav */,
+				64265F9F18DB9314005DADF0 /* yesExplode.wav */,
+				64265F9718DB8A4A005DADF0 /* die2.wav */,
+				64265F9818DB8A4B005DADF0 /* die3.wav */,
 				64E25B4F18DB6D0F005A31A0 /* die.wav */,
 				64E25B5018DB6D0F005A31A0 /* sand.wav */,
 				64E25B4D18DB62EA005A31A0 /* ricochet.wav */,
@@ -383,18 +401,24 @@
 				64E25B5118DB6D0F005A31A0 /* die.wav in Resources */,
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
 				64E25B4C18DB6106005A31A0 /* ricochet.mp3 in Resources */,
+				64265F9A18DB8A4B005DADF0 /* die3.wav in Resources */,
+				64265FA118DB9314005DADF0 /* noMoreHead.wav in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
+				64265FA218DB9314005DADF0 /* theprice.wav in Resources */,
 				64E25B4E18DB62EA005A31A0 /* ricochet.wav in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
+				64265FA318DB9314005DADF0 /* yesExplode.wav in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
 				64E25B5218DB6D0F005A31A0 /* sand.wav in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
+				64265F9918DB8A4B005DADF0 /* die2.wav in Resources */,
+				64265FA018DB9314005DADF0 /* childrenComming.wav in Resources */,
 				64E25B4918DB5C68005A31A0 /* bgSound.mp3 in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
