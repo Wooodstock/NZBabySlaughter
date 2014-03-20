@@ -81,8 +81,7 @@
     
     self.userInteractionEnabled = TRUE;
     [_player setVisible:true];
-    [self schedule:@selector(scheduleIt:) interval:interval];
-    [self schedule:@selector(addBaby:) interval:1];
+    [self schedule:@selector(scheduleIt:) interval:5];
 
     
     //Gesture
@@ -232,9 +231,9 @@
 -(void) scheduleIt:(CCTime)dt{
     NSLog(@"resceduling");
 
-    if(interval > 0.1){
+    if(interval > 0.7){
         [self schedule:@selector(addBaby:) interval:interval];
-        interval = interval - 0.5;
+        interval = interval - 0.1;
     }
     
 }
