@@ -88,6 +88,13 @@
 			<key>previewFolderHidden</key>
 			<true/>
 		</dict>
+		<key>Death</key>
+		<dict>
+			<key>isDirty</key>
+			<true/>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+		</dict>
 		<key>Megagun</key>
 		<dict>
 			<key>isSmartSpriteSheet</key>
@@ -95,8 +102,6 @@
 		</dict>
 		<key>PoweredGun</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>isSmartSpriteSheet</key>
 			<true/>
 		</dict>
