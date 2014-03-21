@@ -19,6 +19,7 @@
 #import "PoweredGun.h"
 #import "MegaGun.h"
 #import <CoreMotion/CoreMotion.h>
+#import "GameOverNode.h"
 
 #define ZOMB_SCORE 5
 #define ZOMB_Left_SCORE 5
@@ -41,6 +42,7 @@
 
 }
 
+@synthesize delegate;
 
 // is called when CCB file has completed loading
 - (void)didLoadFromCCB {
@@ -71,6 +73,7 @@
         [_physicsWorld addChild:wall];
     }
     
+    //Add GameOver zone for create game over when baby leave screens
     GameOver *gameOver = (GameOver*)[CCBReader load:@"GameOver"];
     gameOver.position = CGPointMake(_playerZone.anchorPoint.x, 0);
     gameOver.physicsBody.collisionType  = @"gameOverCollision";
@@ -81,7 +84,7 @@
     
     self.userInteractionEnabled = TRUE;
     [_player setVisible:true];
-    [self schedule:@selector(scheduleIt:) interval:5];
+    [self schedule:@selector(scheduleIt:) interval:5]; //Default 5
 
     
     //Gesture
@@ -359,11 +362,21 @@
 }
 
 - (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair babyCollision:(CCNode *)baby gameOverCollision:(CCNode *)gameOverNode {
+    CCLOG(@"GameOver");
     
-    NSLog(@"Game Over !");
+    for (UIGestureRecognizer *recognizer in [[[CCDirector sharedDirector] view] gestureRecognizers]) {
+        [[[CCDirector sharedDirector] view]  removeGestureRecognizer:recognizer];
+    }
     
-    CCScene *mainMenuScene = [CCBReader loadAsScene:@"MainScene"];
-    [[CCDirector sharedDirector] replaceScene:mainMenuScene];
+    [audio stopEverything];
+    [[[CCDirector sharedDirector] runningScene] stopAllActions];
+    [[[CCDirector sharedDirector] runningScene] removeAllChildrenWithCleanup:YES];
+    [[CCDirector sharedDirector] popScene];
+    
+    GameOverNode *gameplayScene = (GameOverNode*)[CCBReader loadAsScene:@"GameOverNode"];
+    [gameplayScene setScore:_score];
+    
+    [[CCDirector sharedDirector] pushScene:gameplayScene];
     return YES;
 }
 

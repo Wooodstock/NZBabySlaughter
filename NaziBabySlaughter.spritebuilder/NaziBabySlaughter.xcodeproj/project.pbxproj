@@ -25,6 +25,7 @@
 		6427D05E18DA551200B17793 /* Crawling.m in Sources */ = {isa = PBXBuildFile; fileRef = 6427D05D18DA551200B17793 /* Crawling.m */; };
 		6427D06218DA553F00B17793 /* GeneralBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 6427D06118DA553F00B17793 /* GeneralBaby.m */; };
 		6427D06518DA556000B17793 /* CaporalBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 6427D06418DA556000B17793 /* CaporalBaby.m */; };
+		648B5FA918DBB2F700BBC6DC /* GameOverNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 648B5FA818DBB2F700BBC6DC /* GameOverNode.m */; };
 		64B598D818D8B4FC00AE6472 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B598D718D8B4FC00AE6472 /* Bullet.m */; };
 		64D4331818DA0E190065D49D /* MegaGun.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D4331718DA0E190065D49D /* MegaGun.m */; };
 		64E25B4918DB5C68005A31A0 /* bgSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E25B4718DB5C68005A31A0 /* bgSound.mp3 */; };
@@ -109,6 +110,8 @@
 		6427D06118DA553F00B17793 /* GeneralBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeneralBaby.m; path = Source/GeneralBaby.m; sourceTree = "<group>"; };
 		6427D06318DA556000B17793 /* CaporalBaby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CaporalBaby.h; path = Source/CaporalBaby.h; sourceTree = "<group>"; };
 		6427D06418DA556000B17793 /* CaporalBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CaporalBaby.m; path = Source/CaporalBaby.m; sourceTree = "<group>"; };
+		648B5FA718DBB2F700BBC6DC /* GameOverNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverNode.h; path = Source/GameOverNode.h; sourceTree = "<group>"; };
+		648B5FA818DBB2F700BBC6DC /* GameOverNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameOverNode.m; path = Source/GameOverNode.m; sourceTree = "<group>"; };
 		64B598D618D8B4FC00AE6472 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bullet.h; path = Source/Bullet.h; sourceTree = "<group>"; };
 		64B598D718D8B4FC00AE6472 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bullet.m; path = Source/Bullet.m; sourceTree = "<group>"; };
 		64D4331618DA0E190065D49D /* MegaGun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MegaGun.h; path = Source/MegaGun.h; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 				B7378993180767190076A88C /* MainScene.m */,
 				6415C5C118D779A0002B0435 /* Game.h */,
 				6415C5C218D779A0002B0435 /* Game.m */,
+				648B5FA718DBB2F700BBC6DC /* GameOverNode.h */,
+				648B5FA818DBB2F700BBC6DC /* GameOverNode.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 				6427D05E18DA551200B17793 /* Crawling.m in Sources */,
 				06708D4818D39FE000A62DE0 /* GameOver.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
+				648B5FA918DBB2F700BBC6DC /* GameOverNode.m in Sources */,
 				06E204C318D373AE008301CE /* SergentHit.m in Sources */,
 				64D4331818DA0E190065D49D /* MegaGun.m in Sources */,
 				06E486DA18D11F5200D911BE /* PoweredGun.m in Sources */,

@@ -10,6 +10,18 @@
 #import "CCNode.h"
 #import "Player.h"
 
+
+
+@protocol GameDelegate
+
+@required
+-(void)didGameOver:(int)score;
+
+@end
+
+
 @interface Game : CCNode <CCPhysicsCollisionDelegate>
+
+@property (nonatomic, strong) id<GameDelegate>delegate;
 
 @end
