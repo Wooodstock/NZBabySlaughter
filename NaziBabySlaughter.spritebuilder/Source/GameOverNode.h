@@ -10,5 +10,6 @@
 
 @interface GameOverNode : CCNode
 
-@property int score;
+@property int _score;
+
 @end

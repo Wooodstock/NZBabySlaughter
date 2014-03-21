@@ -12,11 +12,11 @@
     CCLabelTTF *_scorelabel;
 }
 
-@synthesize score;
+@synthesize _score;
 
 - (void)didLoadFromCCB {
-    CCLOG(@"GameOver node created with score %d", self.score*100);
-    _scorelabel.string = [NSString stringWithFormat:@"Your Score: %d", self.score*100];
+    CCLOG(@"GameOver node created with score %d", self._score*100);
+    _scorelabel.string = [NSString stringWithFormat:@"Your Score: %d", self._score*100];
 }
 
 - (void)didRetry{

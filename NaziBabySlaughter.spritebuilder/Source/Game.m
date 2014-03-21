@@ -382,7 +382,7 @@
     [[CCDirector sharedDirector] popScene];
     
     GameOverNode *gameplayScene = (GameOverNode*)[CCBReader loadAsScene:@"GameOverNode"];
-    [gameplayScene setScore:_score];
+    gameplayScene._score = _score;
     
     [[CCDirector sharedDirector] pushScene:gameplayScene];
     return YES;
