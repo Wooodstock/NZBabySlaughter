@@ -12,15 +12,38 @@
     CCLabelTTF *_scorelabel;
 }
 
-@synthesize _score;
 
-- (void)didLoadFromCCB {
-    CCLOG(@"GameOver node created with score %d", self._score*100);
-    _scorelabel.string = [NSString stringWithFormat:@"Your Score: %d", self._score*100];
+- (void)didLoadFromCCB {    
+    //rightScore
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+    NSString *documentsDir = [paths objectAtIndex:0];
+    NSString *fileName = [NSString stringWithFormat:@"%@.plist", @"score"];
+    NSString *scorePath = [documentsDir stringByAppendingPathComponent:fileName];
+    NSDictionary *scoreDic = [NSDictionary dictionaryWithContentsOfFile:scorePath];
+    
+    _scorelabel.string = [NSString stringWithFormat:@"Your Score: %@", [scoreDic objectForKey:@"score"]];
 }
 
 - (void)didRetry{
     CCLOG(@"I want retry");
+    
+    [[[CCDirector sharedDirector] runningScene] stopAllActions];
+    [[[CCDirector sharedDirector] runningScene] removeAllChildrenWithCleanup:YES];
+    [[CCDirector sharedDirector] popScene];
+
+    CCScene *gameplayScene = [CCBReader loadAsScene:@"Game"];
+    [[CCDirector sharedDirector] pushScene:gameplayScene];
+}
+
+- (void)didMenu{
+    CCLOG(@"I want retry");
+    
+    [[[CCDirector sharedDirector] runningScene] stopAllActions];
+    [[[CCDirector sharedDirector] runningScene] removeAllChildrenWithCleanup:YES];
+    [[CCDirector sharedDirector] popScene];
+    
+    CCScene *gameplayScene = [CCBReader loadAsScene:@"MainScene"];
+    [[CCDirector sharedDirector] pushScene:gameplayScene];
 }
 
 

@@ -487,8 +487,8 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
-							<integer>0</integer>
+							<string>didMenu</string>
+							<integer>1</integer>
 						</array>
 					</dict>
 					<dict>
@@ -726,6 +726,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -757,8 +759,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>148.25091552734375</real>
-							<real>469.31338500976562</real>
+							<real>192.25091552734375</real>
+							<real>465.31338500976562</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -931,8 +933,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

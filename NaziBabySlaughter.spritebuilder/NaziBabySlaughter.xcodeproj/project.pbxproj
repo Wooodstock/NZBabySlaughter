@@ -27,6 +27,8 @@
 		6427D06218DA553F00B17793 /* GeneralBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 6427D06118DA553F00B17793 /* GeneralBaby.m */; };
 		6427D06518DA556000B17793 /* CaporalBaby.m in Sources */ = {isa = PBXBuildFile; fileRef = 6427D06418DA556000B17793 /* CaporalBaby.m */; };
 		648B5FA918DBB2F700BBC6DC /* GameOverNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 648B5FA818DBB2F700BBC6DC /* GameOverNode.m */; };
+		648B5FB018DBDA4500BBC6DC /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 648B5FAF18DBDA4500BBC6DC /* splash.png */; };
+		648B5FB418DBDCD200BBC6DC /* Credits.m in Sources */ = {isa = PBXBuildFile; fileRef = 648B5FB318DBDCD200BBC6DC /* Credits.m */; };
 		64B598D818D8B4FC00AE6472 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 64B598D718D8B4FC00AE6472 /* Bullet.m */; };
 		64D4331818DA0E190065D49D /* MegaGun.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D4331718DA0E190065D49D /* MegaGun.m */; };
 		64E25B4918DB5C68005A31A0 /* bgSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64E25B4718DB5C68005A31A0 /* bgSound.mp3 */; };
@@ -115,6 +117,9 @@
 		6427D06418DA556000B17793 /* CaporalBaby.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CaporalBaby.m; path = Source/CaporalBaby.m; sourceTree = "<group>"; };
 		648B5FA718DBB2F700BBC6DC /* GameOverNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverNode.h; path = Source/GameOverNode.h; sourceTree = "<group>"; };
 		648B5FA818DBB2F700BBC6DC /* GameOverNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameOverNode.m; path = Source/GameOverNode.m; sourceTree = "<group>"; };
+		648B5FAF18DBDA4500BBC6DC /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		648B5FB218DBDCD200BBC6DC /* Credits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Credits.h; path = Source/Credits.h; sourceTree = "<group>"; };
+		648B5FB318DBDCD200BBC6DC /* Credits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Credits.m; path = Source/Credits.m; sourceTree = "<group>"; };
 		64B598D618D8B4FC00AE6472 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bullet.h; path = Source/Bullet.h; sourceTree = "<group>"; };
 		64B598D718D8B4FC00AE6472 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Bullet.m; path = Source/Bullet.m; sourceTree = "<group>"; };
 		64D4331618DA0E190065D49D /* MegaGun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MegaGun.h; path = Source/MegaGun.h; sourceTree = "<group>"; };
@@ -234,6 +239,8 @@
 				6415C5C218D779A0002B0435 /* Game.m */,
 				648B5FA718DBB2F700BBC6DC /* GameOverNode.h */,
 				648B5FA818DBB2F700BBC6DC /* GameOverNode.m */,
+				648B5FB218DBDCD200BBC6DC /* Credits.h */,
+				648B5FB318DBDCD200BBC6DC /* Credits.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -308,6 +315,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				648B5FAF18DBDA4500BBC6DC /* splash.png */,
 				64265F9C18DB9314005DADF0 /* childrenComming.wav */,
 				64265F9D18DB9314005DADF0 /* noMoreHead.wav */,
 				64265F9E18DB9314005DADF0 /* theprice.wav */,
@@ -438,6 +446,7 @@
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
+				648B5FB018DBDA4500BBC6DC /* splash.png in Resources */,
 				B71F5911188484E7003F4D28 /* iPad-old.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +492,7 @@
 				06E204C318D373AE008301CE /* SergentHit.m in Sources */,
 				64D4331818DA0E190065D49D /* MegaGun.m in Sources */,
 				06E486DA18D11F5200D911BE /* PoweredGun.m in Sources */,
+				648B5FB418DBDCD200BBC6DC /* Credits.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

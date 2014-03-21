@@ -372,6 +372,15 @@
 - (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair babyCollision:(CCNode *)baby gameOverCollision:(CCNode *)gameOverNode {
     CCLOG(@"GameOver");
     
+    NSDictionary *scoreDic = [[NSDictionary alloc] initWithObjectsAndKeys: [NSString stringWithFormat:@"%d", _score*100], @"score", nil];
+    
+    //rightScore
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory , NSUserDomainMask, YES);
+    NSString *documentsDir = [paths objectAtIndex:0];
+    NSString *fileName = [NSString stringWithFormat:@"%@.plist", @"score"];
+    NSString *scorePath = [documentsDir stringByAppendingPathComponent:fileName];
+    [scoreDic writeToFile:scorePath atomically:YES];
+    
     for (UIGestureRecognizer *recognizer in [[[CCDirector sharedDirector] view] gestureRecognizers]) {
         [[[CCDirector sharedDirector] view]  removeGestureRecognizer:recognizer];
     }
@@ -381,11 +390,12 @@
     [[[CCDirector sharedDirector] runningScene] removeAllChildrenWithCleanup:YES];
     [[CCDirector sharedDirector] popScene];
     
-    GameOverNode *gameplayScene = (GameOverNode*)[CCBReader loadAsScene:@"GameOverNode"];
-    gameplayScene._score = _score;
+    CCNode *gameplayScene = [CCBReader loadAsScene:@"GameOverNode"];
     
     [[CCDirector sharedDirector] pushScene:gameplayScene];
+    
     return YES;
+    
 }
 
 
