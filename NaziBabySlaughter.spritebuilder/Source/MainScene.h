@@ -7,7 +7,11 @@
 //
 
 #import "CCNode.h"
+#import "Game.h"
+#import "GameOverNode.h"
 
-@interface MainScene : CCNode
+@interface MainScene : CCNode <GameDelegate>
+
+-(void)didGameOver:(int)score;
 
 @end

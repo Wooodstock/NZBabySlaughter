@@ -13,10 +13,17 @@
 
 - (void)play {
     CCLOG(@"play button pressed");
+    
     CCScene *gameplayScene = [CCBReader loadAsScene:@"Game"];
-    [[CCDirector sharedDirector] replaceScene:gameplayScene];
+    [[CCDirector sharedDirector] pushScene:gameplayScene];
+    
+    //[[CCDirector sharedDirector] replaceScene:gameplayScene];
 }
 
-
+-(void)didGameOver:(int)score{
+    CCLOG(@"tryng to do something");
+    CCScene *gameplayScene = [CCBReader loadAsScene:@"GameOverNode"];
+    [[CCDirector sharedDirector] replaceScene:gameplayScene];
+}
 
 @end

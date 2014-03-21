@@ -17,7 +17,16 @@
         CCLOG(@"Crawling created");
     }
     
+    //[self performSelector:@selector(die)withObject:nil afterDelay:3.0];
+    
     return self;
 }
+
+/*
+-(void)die{
+    [self removeFromParent];
+}
+*/
+
 
 @end
