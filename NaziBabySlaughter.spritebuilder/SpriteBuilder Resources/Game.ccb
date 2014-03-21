@@ -151,8 +151,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>140</real>
-											<real>36.919998168945312</real>
+											<real>141.72799682617188</real>
+											<real>30.899999618530273</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -180,6 +180,8 @@
 										<string>Player.ccb</string>
 									</dict>
 								</array>
+								<key>selected</key>
+								<true/>
 							</dict>
 						</array>
 						<key>customClass</key>
@@ -207,7 +209,7 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.13539999723434448</real>
+									<real>0.17750000953674316</real>
 									<real>0.048890132457017899</real>
 									<integer>0</integer>
 									<integer>2</integer>
@@ -221,7 +223,7 @@
 								<string>Size</string>
 								<key>value</key>
 								<array>
-									<real>280</real>
+									<real>230</real>
 									<real>73.839996337890625</real>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -324,8 +326,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
