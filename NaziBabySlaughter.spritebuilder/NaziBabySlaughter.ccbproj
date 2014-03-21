@@ -90,8 +90,6 @@
 		</dict>
 		<key>Death</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>isSmartSpriteSheet</key>
 			<true/>
 		</dict>
@@ -203,6 +201,8 @@
 		</dict>
 		<key>crawling</key>
 		<dict>
+			<key>isDirty</key>
+			<true/>
 			<key>isSmartSpriteSheet</key>
 			<true/>
 		</dict>
